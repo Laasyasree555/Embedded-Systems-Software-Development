@@ -46,3 +46,40 @@ Linux OS VS Windows OS
 - Windows OS is not modifable and unchangeable
 - Linux OS is modifiable and can be changed
 
+OSS VS FREEWARE
+OSS: 
+1) Users have the right to access &
+modify the source codes.
+2) In case original programmer
+disappeared, users & developer
+group of the S/W usually keep its
+support to the S/W.
+3) OSS usually has the strong users &
+developers group that manage and
+maintain the project.
+
+
+FREEWARE:
+1) Freeware is usually distributed in a
+form of binary at ‘Free of Charge’,
+but does not open source codes
+itself.
+2) Developer of freeware could
+abandon development at any time
+and then final version will be the
+last version of the freeware. No
+enhancements will be made by
+others.
+3) Possibility of changing its licensing
+policy.
+
+LINUX Properties:
+1) Multitasking - Ability to handle multiple tasks across single / multiple processors
+2) Multi-user - Have got users with different level of privileges for secured access
+3) Protected Memory -  Clear distinction called ‘user-space’ and ‘kernel’ space thereby having protected memory
+access. This makes Linux Super secure comparing with other operating systems 
+4) Hierarchical File system - Well organized file system that handles various types of files. This also makes handling
+various inputs very simple
+
+What is GPL License?
+
