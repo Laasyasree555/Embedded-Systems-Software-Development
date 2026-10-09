@@ -82,4 +82,7 @@ access. This makes Linux Super secure comparing with other operating systems
 various inputs very simple
 
 What is GPL License?
-
+General Public License is free and open-source software license that relies on copy-left principles to ensure the software remains free for all users.
+Copy-left: when you distribute a software based on GPL License, you must generally distribute it under the same GPL License and provide the corresponding source code under the license's conditions.
+versions: GPLv2, GPLv3, LGPL, AGPL
+Examples: Linux kernel, wordpress, Bash, GIMP
