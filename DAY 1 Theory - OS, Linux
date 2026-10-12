@@ -19,9 +19,11 @@ Operating systems(OS):
 -These are all the fuctions of Kernel
 - Simple embedded systems like traffic lights, calculator does not require OS, only complex emebedded systems require OS.
 - OS is a software/program
+- OS is a system level software
 - We can be able to create our own OS
 - OS won't stop automatically, unless it crashes or we close the laptop
 - Kernel is the core part of OS. Acts as a bridge between software applications and physical Hardware.
+- There are two levels of Softwares: System level, Application level.
 
 LINUX SYSTEMS:(LS)
 - It is one of the OS
@@ -80,6 +82,33 @@ LINUX Properties:
 access. This makes Linux Super secure comparing with other operating systems 
 4) Hierarchical File system - Well organized file system that handles various types of files. This also makes handling
 various inputs very simple
+
+LINUX Components: 
+● Hardware Controllers: This subsystem is
+comprised of all the possible physical 
+devices in a Linux installation - CPU,
+memory hardware, hard disks
+● Linux Kernel: The kernel abstracts and
+mediates access to the hardware resources,
+including the CPU. A kernel is the core of
+the operating system
+● O/S Services: These are services that are
+typically considered part of the operating
+system (e.g. windowing system, command
+shell)
+● User Applications: The set of applications
+in use on a particular Linux system (e.g.
+web browser)
+
+- Segmentation Fault error: A segmentation fault (Segfault) is an error that occurs when a program tries to access memory in a way that is not permitted.
+
+- User Interfaces:
+  There are two types of user Interfaces
+  1) GUI(Graphical User Interface) - In graphical mode the user will be given a GUI using which he / she will be
+able to use the system using mouse
+
+  2) CLI(Command Line Interface) - Textual mode used to execute requested commands
+
 
 What is GPL License?
 General Public License is free and open-source software license that relies on copy-left principles to ensure the software remains free for all users.
