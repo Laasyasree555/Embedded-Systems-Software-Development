@@ -1,41 +1,62 @@
 Today, I practiced basic commands of Linux.
 LINUX COMMANDS:
 1) ls - to list the contents of directory
+
 2) mkdir - to create a folder
 eg: mkdir ESSCI_2026
+
 3) mkdir dir{1..10} - to create multiple folder
 eg: results: dir1 dir2 dir3 ------ etc
+
 4) pwd - present working directory, it tells which directory we are currently working on
+
 5) cd - change directory, used to change the directory path
+
 6) touch - to create a file
 eg: touch F{1..10}.txt
     (touch File_name.extension)
+
 7) cd .. - Goes to the parent diectory
 eg: current path: ~/ESSCI_2026/Adv_c/assignment$ cd ..
     parent path: ~/ESSCI_2026/Adv_c
+
 8) cd - -goes to the previous directory
 eg: current path: ~/ESSCI_2026/LI$ cd -
     previos path: /home/laasya555/ESSCI_2026
+
 9) rmdir - to delete the directory, it deletes only the directories which are empty
 eg: rmdir C++
+
 10) rmdir d1 d2 d3, rmdir dir{1..10} - these are used to delete multiple folders/directories
+
 11) rm - used to delete files
 eg: rm F{1..10}.txt
+
 12) rm -r - even if the directory is not empty, we can delete by using this function
 eg: rm -r Template
+
 13) vi file.txt- It is like a notepad, used to enter information in the file
+
 14) After the notepad is open, click "i" (INSERT) to write the information
+
 15) Click "ESC, :, wq, enter" - to save and close the notepad
+
 16) cat - used to display the contents of the file(notepad)
 eg: cat file.txt
+
 17) head file.txt - displays the first 10 lines in the file(notepad)
+
 18) tail file.txt - displays the last 10 lines in the file(notepad)
+
 19) head -n - used to display only certain lines in the notepad
 eg: head -2 -displays only the first 2 lines
     tail -5 -displays only the first 5 lines
+
 20) cp - used to copy and paste the files from one directory to another
 eg: laasya555@Laasyasree:~/ESSCI_2026/Adv_c/Template$ cp file.txt ~/ESSCI_2026/Adv_c/assignment
+
 - There are 2 different directory path:
 1) Absolute path : cd ~/ESSCI_2026/Adv_c/Template -directory if it is starting from home
 2) Relative path : cd Adv_c/Template - starts from current working directory
+
 - The path follows/applies only forward direction
