@@ -1,0 +1,106 @@
+1) mv - used to cut & paste
+ eg: mv file.txt ~/ESSCI_2026/DS
+file.txt - source
+~/ESSCI_2026/DS - destination
+2) mv (move) - it is also used to rename the file
+ eg: mv file.txt line.txt
+3) man - manual, used to learn about the command
+ eg: man ls
+    man mv
+    man ech
+    man printf
+4) echo - used to print the statement in the terminal itself, it is temporary.
+ eg: echo Hii Hello
+result: Hii Hello
+5) wc - word count, it tells the no. of lines, words, characters are present in a file
+ eg: wc file.txt
+result: 15 30 111
+15 - no. of lines
+30 - total words
+111 - no. of characters
+6) if we type only "wc", the cursor will wait for us to type the information
+- ctrl+D is used to exit the typing
+  eg: wc
+  type: Hi my name is laasya
+  ctrl+d
+  result: 1 5 21
+7) > - Redirection, it is used to store the output of the command
+  eg: wc file.txt > try.txt
+      cat try.txt
+  - here the the wc output of the file.txt is stored in try.txt, even if the try.txt file does not exist before it will create a file and stores the output
+  eg: ls file.txt > hi.txt
+      cat hi.txt
+  - here the list of contents of the file.txt are redirected to hi.txt
+8) How to print the middle lines in a file?
+  - file.txt has 15 lines, but I wanted to print only line 6,7,8.
+  - As we know by using head and tail command we can print the first and last lines in a file and the default number is 10.
+  - i.e, we can print only 10 lines at once or we can use head -n, tail -n command to print required lines.
+  - But it is not possible to print middle lines.
+  - So, this is where piping( | ) command comes. By using piping we can print the middle lines.
+    eg: head -8 file.txt | tail -3
+    result: line 6
+            line 7
+            line 8
+    - what happens here is head -8 prints first 8 lines, tail -3 takes head -8 as an input and considers printing only the last 3 lines which are line 6,7,8.
+    eg: head -8 file.txt | tail -3 | wc
+    result: 3 6 21
+9) ls -l - The ls -l command in Linux is used to list files and directories in the current directory in a long format, displaying detailed information about each file and directory.
+eg: drwxr-xr-x 6 laasya555 laasya555 4096 Oct 13 06:10 Adv_c
+- drwxr-xr-x - File type and permissions
+- 6 - no. of links
+- laasya555 - owner
+- laasya555 - group
+- 4096 - Directory size in bytes
+- Oct 13 06:10 -  last modified date & time
+- Adv_c - Directory name
+
+10) chmod - change mode, it is used to change the permissions for a file
+    eg: chmod 644 file.txt
+    result: -rw-r--r-- 1 laasya555 laasya555 111 Oct 13 15:55 file.txt
+    eg:  chmod 777 file.txt
+    result: -rwxrwxrwx 1 laasya555 laasya555  111 Oct 13 15:50 file.txt
+    here:
+    - r - read
+    - w - write
+    - x - execute
+    - d - directory
+    - if the result starts with d then it is the information of directory/folder, else it is a file.
+
+  11) eg: chmod g-x file.txt - used to remove access for group, others
+      - what happens here is for g(group) the x(execution) access is removed/removing
+  12) Shell: A shell is a command-line interpreter that acts as an interface between the user and the operating system.
+      - There are 2 types of shells:
+        1) Login shell: A login shell is a shell started as part of a user's login session.
+           Ctrl+Alt+F3/F4 - open the shell, then it asks for username and password
+           Ctrl+Alt+F2 - close/exit
+        2) Non-login shell: Starts without establishing a login session.(Terminal)
+  13) bash - Bash is a shell. Its job is to interpret the commands you type and arrange for them to be executed.
+  14) | Component        | Responsibility                                        |
+| ---------------- | ----------------------------------------------------- |
+| **Bash (Shell)** | Interprets commands and arranges for their execution. |
+| **Compiler**     | Translates source code, such as C, into machine code. |
+| **CPU**          | Executes machine instructions encoded in binary.      |
+  15) Types of Commands:
+      1) External
+         eg: type mkdir
+      2) Shell Builtin
+         eg: type cd
+      3) Aliased
+         eg: type ls
+  16) type - Used to know the type of the command.
+      eg: type mkdir
+      result: mkdir is /usr/bin/mkdir
+  17) root ( / )- Root is the first directory
+      eg: cd /
+      result: before - ~$
+              after - /$
+      - it is present before home
+  18) Type of Directories:
+      1) bin(binaries) - Accessible for all the users, includes fundamental commands used for operate systems and perform day-to-day tasks like ls, cp, mv, rm, cat, etc
+      2) sbin(system binaries) - Not accessible to regular users only system administrator(root user) can be accessed, includes powerful commands used for System recovery, Hardware configuration, Administration and System maintainance like fsck, reboot,  shutdown, etc. Regular users can be accessed with the elevated priveleges lide sudo.  
+      3) boot - Contains files required to start the Linux operating system.
+      4) dev - Contains special files representing devices and other kernel interfaces.
+      5) etc - Contains system-wide configuration files.
+      6) tmp - Stores temporary files created by applications and processes.
+         
+        
