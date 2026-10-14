@@ -1,22 +1,37 @@
-Today Advance C Programming classes has started. In today's class only C Programming basics were taught.
+Today Advance C Programming classes has started. In today's class only C Programming basics and theory  were taught.
+
 What is C Programming?
-1) C Programming is a mid-level language, it can acts as both low-level and high-level language
+
+1) C Programming is a mid-level language, it can acts as both low-level and high-level language.
+
 2) low-level language(Assembly level): It is too close to hardware i.e, hardware can easily understand this language.
 eg: 8051 Microcontroller
+
 3) high-level language: It is too close to human being i.e, humans can easily understand this language.
 eg: Python, Java
+
 4) C is a procedural language - A procedural programming language is a language in which we write a program as a sequence of instructions or steps that the computer must follow to complete a task.
+
 5) C is easy to understand and debug.
+
 6) C Programming language contains "32 keywords".
+
 7) Syntax is very important in C Programming it acts as a grammar to the Programming language.
+
 8) With the help of pointers we can locate the address in memory.
+
 9) C is traditionally called a compiled language.
+
 WHY C FOR EMBEDDED SYSTEMS?
+
 - Time - Comparing to other programming language C takes less time to execute programs/tasks.
 eg: C uses either compiler/interpreter to execute tasks. Where python uses only interpreter to execute tasks.
     - A compiler typically translates the entire source program into machine code before the program runs.
     - An interpreter is described as translating and executing source code one statement at a time.
+
 - Space - Comparing to other programming language C takes less space to store information in memory.
 eg: Microcontroller(Boards) contains memory in kb(Kilo Byte), where laptop contains memory in GB(Giga Byte). So eventually Microcontrollers needs C programming to store data in memory. Because C occupies less space.
+
 WHY C?
+
 - Used for developing Operating systems, Device Drivers, Embedded systems, Games, System software and various applications, contributing to its popularity and robust ecosystem.
