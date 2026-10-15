@@ -92,7 +92,7 @@ int main() {
 }
 *\
 
-
+//BODMAS
 /*
 #include <stdio.h>
 int main() {
@@ -100,6 +100,8 @@ int main() {
     return 0;
 }
     */
+
+// avg of 3 numbers
 /*
 #include <stdio.h>
 int main () {
