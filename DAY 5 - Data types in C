@@ -1,0 +1,20 @@
+Data types:
+1) Numbers: positive, negative, zero - int
+
+2) Characters: A-Z, a-z, special characters - char
+
+3) Real numbers: float, double
+
+; - represents the end of the statement
+
+Format Specifier: 
+1) int - %d
+2) char - %c
+3) float - %f
+4) double - %lf(long float)
+
+No. of bytes:
+1) int - 4 bytes - 32 bits
+2) char - 1 byte - 8 bits
+3) float - 4 bytes - 32 bits
+4) double - 8 bytes - 64 bits
