@@ -2,15 +2,15 @@ Conditional Constructs:
 1) Single Iteration: if & its family, switch
 2) Multi Iteration : Loops
 
-Relational Operators: >, <, >=, <=, ==, !=
+- Relational Operators: >, <, >=, <=, ==, !=
 
-Syntax of if Condition:
+1) Syntax of if Condition:
 if(condition)
 {
   //statement
 }
 
-Syntax of if-else Condition:
+2) Syntax of if-else Condition:
 if(Condition)
 {
   //statement1
@@ -20,7 +20,7 @@ else
   //statement 2
 }
 
-Syntax of if-else if Condition:
+3) Syntax of if-else if Condition:
 if(Condition 1)
 {
   //statement 1
@@ -37,7 +37,7 @@ else
 -There is no ';' after condition.
 - n no. of else-if conditions can be taken.
 
-Logical operators:
+- Logical operators:
 1) AND - &&
  - && only works when 2 conditions are True(1)
  Eg: cond1 && cond2
