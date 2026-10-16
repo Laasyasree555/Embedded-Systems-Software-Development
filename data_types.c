@@ -1,3 +1,5 @@
+
+//int datatype
 /*
 #include <stdio.h>
 int main() {
@@ -8,6 +10,7 @@ int main() {
 }
 */
 
+//char datatype
 /*
 #include <stdio.h>
 int main() {
@@ -17,6 +20,7 @@ int main() {
 }
 */
 
+//char and int datatypes
 /*
 #include <stdio.h>
 int main () {
@@ -26,6 +30,8 @@ int main () {
     return 0;
 }
 */
+
+//float, double data types
 /*
 #include <stdio.h>
 int main () {
@@ -37,6 +43,7 @@ int main () {
 }
 */
 
+//scanf function
 /*
 #include <stdio.h>
 int main () {
@@ -47,6 +54,8 @@ int main () {
     return 0;
 }
 */
+
+//char, int, float, double data types
 /*
 #include <stdio.h>
 int main () {
@@ -65,6 +74,8 @@ int main () {
     return 0;
 }
 */
+
+//sum of 2 numbers
 /*
 #include <stdio.h>
 int main() {
@@ -79,7 +90,7 @@ int main() {
 }
 */
 
-
+//sum of 2 numbers, more advance
 /*
 #include <stdio.h>
 int main() {
