@@ -5,6 +5,15 @@ Data types:
 
 3) Real numbers: float, double
 
+Why Data types? why to create them?
+- A data type tells the C compiler what kind of data a variable is supposed to store.
+- Reason 1: To determine how much memory to allocate
+- Reason 2: To tell the computer how to interpret the data
+- Reason 3: To perform operations correctly
+
+What is a variable?
+- A variable is a named storage location used to store a value that a program can access and, when appropriate, change.
+
 ; - represents the end of the statement
 
 Format Specifier: 
