@@ -1,3 +1,4 @@
+// to print only the last digit of given number
 /*
 #include <stdio.h>
 int main() 
@@ -10,6 +11,7 @@ int main()
     return 0;
 }
 */
+//square, cube values of a given number
 /*
 #include <stdio.h>
 int main() {
@@ -23,6 +25,7 @@ int main() {
 }
 */
 
+//Relational operators
 /*
 #include <stdio.h>
 int main() {
@@ -44,6 +47,8 @@ int main() {
     return 0;
 }
 */
+
+//sqaure, cube of a given number using if condition
 /*
 #include <stdio.h>
 int main() {
@@ -59,6 +64,8 @@ int main() {
     }
 }
     */
+
+//if-else condition
 /*
 #include <stdio.h>
 int main() {
@@ -76,6 +83,8 @@ int main() {
     return 0;
 }
 */
+
+//to check if the given number is even or odd
 /*
 #include <stdio.h>
 int main() {
@@ -94,6 +103,8 @@ int main() {
     return 0;
 }
     */
+
+//to print the total amount after discount
 /*
 #include <stdio.h>
 int main() {
@@ -114,6 +125,7 @@ int main() {
 }
 */
 
+//avg value using if-else condition
 /*
 #include <stdio.h>
 int main() {
@@ -134,6 +146,7 @@ int main() {
 }
 */
 
+//if else-if condition
 /*
 #include <stdio.h>
 int main() {
@@ -156,6 +169,7 @@ int main() {
 }
 */
 
+//ATM Machine using if else-if condition
 /*
 #include <stdio.h>
 int main() {
@@ -178,6 +192,8 @@ int main() {
     return 0;
 }
 */
+
+//marks question using if else-if condition
 /*
 #include <stdio.h>
 int main() {
