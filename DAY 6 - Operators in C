@@ -1,0 +1,50 @@
+Conditional Constructs:
+1) Single Iteration: if & its family, switch
+2) Multi Iteration : Loops
+
+Relational Operators: >, <, >=, <=, ==, !=
+
+Syntax of if Condition:
+if(condition)
+{
+  //statement
+}
+
+Syntax of if-else Condition:
+if(Condition)
+{
+  //statement1
+}
+else
+{
+  //statement 2
+}
+
+Syntax of if-else if Condition:
+if(Condition 1)
+{
+  //statement 1
+}
+else if(condition 2)
+{
+  //statement 2
+}
+else
+{
+  //statement 3
+}
+
+-There is no ';' after condition.
+- n no. of else-if conditions can be taken.
+
+Logical operators:
+1) AND - &&
+ - && only works when 2 conditions are True(1)
+ Eg: cond1 && cond2
+     (5>1) && (5<10)
+     output: True(1)
+2) OR - ||
+- || only works when either one of the statement is True(1)
+ Eg: cond1 || cond2
+     (5<1) || (5>4)
+     output: True(1)
