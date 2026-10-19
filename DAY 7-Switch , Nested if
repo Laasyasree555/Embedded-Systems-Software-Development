@@ -1,14 +1,21 @@
 KEY POINTS
 - In an if-else condition, if the given input is non-zero the condition is TRUE(1), else the condition is FALSE(0).
+
 - We can overwrite the value in if condition even if the number is already defined before.
 eg: int n = 10;
     if(n = 2)
 output: n =2
+
 - without "{}" if conditions will be printed only if there is a single statement.
+
 - if we are giving group of statements in the if or else conditions then "{}" are MANDATORY.
-;- should not print after the if/if-else/else-if/nested if Conditions.
+
+; - should not print after the if/if-else/else-if/nested if Conditions.
+
 - even : n%2== 0
+
 -odd: n%2 !=0/n%2 == 1
+
 Nested-if Condition syntax:
 if(condition 1)
 {
@@ -60,9 +67,15 @@ default:
 break;
 }
 - n no. of case labels can be given.
--break = used to come out of the program
+
+-break = used to come out of the program.
+
 -fall through condition: when the break is not mentioned, it goes to the next case labels until break statement/end of the program.
+
 -syntax order is not important.
+
 -duplicate values are not allowed.
+
 -switch case is only applicable to int, char.
+
 -for float, double switch case cannot be used.
