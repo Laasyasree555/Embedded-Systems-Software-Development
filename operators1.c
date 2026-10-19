@@ -1,0 +1,178 @@
+//19/10/2026
+/* //complied time error
+#include <stdio.h>
+int main() {
+    int n = 1;
+    if(n);
+    {
+        printf("hi");
+    }
+    else
+    {
+        printf("hello");
+    }
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int num = 800;
+    if (num =0)
+    
+        printf("hi");
+    
+    else
+        printf("hello");
+        printf("welcome");
+    
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int n;
+    printf("enter n: ");
+    scanf("%d", &n);
+    if(n%2==0 && n>0)
+    {
+        printf("postive even");
+    }
+    else if(n%2 == 0 && n<0)
+    {
+        printf("negative even");
+    }
+    else if (n%2 != 0 && n<0)
+    {
+        printf("negative odd");
+    }
+    else
+    {
+        printf("postive odd");
+    }
+    return 0;
+}
+*/
+/*
+ #include <stdio.h>
+ int main() {
+    int n;
+    printf("enter n: ");
+    scanf("%d", &n);
+    if(n>0)
+    {
+        if(n%2 == 0)
+        {
+            printf("postiive even");
+        }
+        else
+        {
+            printf("positive odd");
+        }
+    }
+    else
+    {
+        if(n%2 != 0)
+        {
+            printf("Negative odd");
+        }
+        else
+        {
+            printf("negative even");
+        }
+    }
+    return 0;
+ }
+*/
+/*
+#include <stdio.h>
+int main() {
+    int n;
+    printf("enter number: ");
+    scanf("%d", &n);
+    if(n==1)
+    {
+        printf("Sunday");
+    }
+    else if(n==2)
+    {
+        printf("Monday");
+    }
+     else if(n==3)
+    {
+        printf("Tuesday");
+    }
+     else if(n==4)
+    {
+        printf("wednesday");
+    }
+    else if(n==5)
+    {
+        printf("Thursday");
+    }
+    else if(n==6)
+    {
+        printf("Friday");
+    }
+    else if(n==7)
+    {
+        printf("Saturday");
+    }
+    else{
+        printf("Invalid");
+    }
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int n;
+    printf("enter number: ");
+    scanf("%d", &n);
+    switch(n)
+    {
+        case 1: printf("Sunday\n");
+        break;
+        case 2: printf("Monday\n");
+        break;
+        case 3: printf("Tuesday\n");
+        break;
+        default: printf("Invalid\n");
+        break;
+        case 4: printf("Wednesday\n");
+        break;
+        case 5: printf("Thursday\n");
+        break;
+        case 6: printf("Friday\n");
+        break;
+        case 7: printf("Saturday\n");
+        break;
+    }
+    return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+int main() {
+    char n;
+    printf("enter letter: ");
+    scanf("%c", &n);
+    switch(n)
+    {
+        case 'N': printf("North\n");
+        break;
+        case 'S': printf("South\n");
+        break;
+        case 'E': printf("East\n");
+        break;
+        case 'W': printf("West\n");
+        break;
+        default: printf("Invalid\n");
+        break;
+    }
+    return 0;
+}
+*/
