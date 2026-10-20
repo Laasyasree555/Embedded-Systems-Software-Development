@@ -11,6 +11,8 @@ int main() {
     return 0;
 }
 */
+
+//print even numbers from 1 to 10
 /*
 #include <stdio.h>
 int main() {
@@ -24,18 +26,21 @@ int main() {
     return 0;
 }
 */
+
 // sum of n natural numbers
 /*
 #include <stdio.h>
-int main() {
-    int i = 1;
-    while(i<=5)
+int main()
+{
+    int n, i = 1, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while(i <= n)
     {
-        if(i%3 == 0 && i%5
-        printf("%d\n", i);
+        sum = sum + i;
         i++;
     }
+    printf("Sum = %d\n", sum);
     return 0;
 }
-    */
-
+*/
