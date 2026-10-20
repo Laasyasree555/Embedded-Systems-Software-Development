@@ -1,1 +1,19 @@
+LOOPS:
+Three important things to remember in loops:
+1) Initialization - Initial value we are assigning
+2) Condition - when to stop the loop
+3) How are we going to update the value (Increase/Decrease)
+eg: 
+int i = 1; //Initialization
+while(i<=3) //Condition
+{
+printf("hello");
+i++; //increase/decrease
+}
+-Executes until the condition is "FALSE".
 
+WHILE LOOP: SYNTAX
+while(condition)
+{
+//statement
+}
