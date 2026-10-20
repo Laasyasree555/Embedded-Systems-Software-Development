@@ -1,0 +1,75 @@
+
+/*
+#include <stdio.h>
+int main() {
+    int pin = 1234;
+    int i = 1;
+    int balance = 1000;
+    int choice, deposit, withdrawal;
+    while(i<=3)
+    {
+        printf("Enter PIN: ");
+        scanf("%d", &pin);
+    if(pin == 1234)
+    {
+        printf("Login Successful\n");
+    while(choice!=4)
+    {
+    printf("Menu: \n");
+    printf("1) Check Balance\n");
+    printf("2) Deposit Money\n");
+    printf("3) Withdraw Money\n");
+    printf("4) Exit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    switch(choice)
+    {
+        case 1: printf("Balance: %d\n", balance);
+        break;
+        case 2: printf("Enter Deposit Money: ");
+        scanf("%d", &deposit);
+        if(deposit<=0)
+        {
+            printf("Invalid deposit\n");
+        }
+        else
+        {
+            balance = deposit+balance;
+            printf("Updated balance: %d\n", balance);
+        }
+        break;
+        case 3: printf("Enter Withdrawal Money: ");
+        scanf("%d", &withdrawal);
+        if(withdrawal<=0)
+        {
+            printf("Invalid amount\n");
+        }
+        else if (withdrawal>balance)
+        {
+            printf("Insufficient balance\n");
+        }
+        else
+        {
+            balance = balance - withdrawal;
+            printf("Updated balance: %d\n", balance);
+        }
+        break;
+        case 4: printf("Exiting\n");
+        break;
+        default: printf("Invalid\n");
+        break;
+    }
+
+}
+return 0;
+    }
+    else
+    {
+        printf("Wrong PIN\n");
+        i++;
+    }
+}
+printf("Too many attempts\n");
+return 0;
+}
+*/
