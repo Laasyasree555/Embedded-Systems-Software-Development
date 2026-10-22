@@ -1,1 +1,17 @@
+DO WHILE LOOP: SYNTAX
+do
+{
+//statements
+}
+while(condition);
 
+eg: 
+int = 0
+do
+{
+printf("hello");
+i++;
+}
+while(i>1);
+output: hello
+ - it is a exit controlled loop
