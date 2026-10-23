@@ -74,7 +74,7 @@ int main() {
 // Question 6
 #include <stdio.h>
 int main() {
-int a, b, length, breadth, area;
+int length, breadth, area;
 printf("Enter the length: ");
 scanf("%d", &length);
 printf("Enter the breadth: ");
