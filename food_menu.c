@@ -1,0 +1,59 @@
+/*
+#include <stdio.h>
+int main() {
+    int choice, quantity, price, Total_amount;
+    printf("==========FOOD MENU==========\n");
+    printf("1. Pizza\n");
+    printf("2. Burger\n");
+    printf("3. Sandwich\n");
+    printf("4. Paste\n");
+    printf("5. Icecream\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    while(choice<=5)
+    {
+        printf("Enter Quantity: ");
+        scanf("%d", &quantity);
+        switch(choice)
+    {
+        case 1: printf("Item: Pizza\n");
+        price = 250;
+        break;
+        case 2: printf("Item: Burger\n");
+        price = 200;
+        break;
+        case 3: printf("Item: Sandwich\n");
+        price = 100;
+        break;
+        case 4: printf("Item: Paste\n");
+        price = 500;
+        break;
+        case 5: printf("Item: Icecream\n");
+        price = 50;
+        break;
+        default: printf("No item found\n");
+        break;
+    }
+    printf("price per item: Rs.%d\n", price);
+    Total_amount = price * quantity;
+    printf("Total Amount: Rs.%d\n", Total_amount);
+    return 0;
+}
+printf("Invalid choice\n");
+    return 0;
+}
+*/
+
+#include <stdio.h>
+int main() {
+    int num, rem, last_digit;
+    printf("Enter num: ");
+    scanf(" %d", &num);
+    while(num != 0)
+    {
+        rem = num%10;
+        last_digit = rem;
+    }
+    printf("last_digit: %d", last_digit);
+    return 0;
+}
