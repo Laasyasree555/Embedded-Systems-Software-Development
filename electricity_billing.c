@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+    int units, electricity_bill, bill;
+    printf("Enter consumed units: ");
+    scanf("%d", &units);
+    if(units<=100)
+    {
+        bill = units * 2;
+    }
+    else if(units>=101 && units<=200)
+    {
+        bill = (100 * 2) + ((units -100) * 3);
+    }
+    else if(units>=201 && units<=300)
+    {
+        bill = (100 * 2) + (100 * 3) + ((units -200) * 5);
+    }
+    else if(units>300)
+    {
+        bill = (100 * 2) + (100 * 3) + (100 * 5) + ((units -300) * 7);
+    }
+    else
+    {
+        printf("Invalid\n");
+    }
+    printf("Electricity bill: %d\n", bill);
+    return 0;
+}
