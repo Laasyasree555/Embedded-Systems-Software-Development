@@ -1,0 +1,24 @@
+break - is used in switch and loops(for/while/do while)
+      - used to exit from the loop, when the output gets prints.
+eg: 
+for(i = 1; i <= 10; i++)
+{
+if(i == 5)
+{
+break;
+}
+printf("%d", i);
+}
+
+output: 1 2 3 4
+
+WHY break?
+The loop here executes 10 times i.e, the max number of loop executing are 10, in that the loop will end with the help of break when the i value is equals to 5.
+
+PRIME NUMBER - it is divisible by 1 and itself only.
+
+
+
+
+
+
