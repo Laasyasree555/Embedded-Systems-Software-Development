@@ -57,7 +57,7 @@ int main() {
 }
 
 //28/10/26
-//pattern
+//alphabetical pattern
 #include <stdio.h>
 int main() {
     int i, j;
