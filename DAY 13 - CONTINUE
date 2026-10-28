@@ -1,0 +1,53 @@
+Continue: 
+- used to skip particular iteration.
+- used only in loops(for/while/ do while)
+
+eg: 
+for(i = 1; i<=5; i++)
+{
+if(i==3)
+continue;
+printf("%d", i);
+}
+
+output: 1 2 4 5
+
+eg: 
+int i =1;
+while(i<=5)
+{
+if(i ==3)
+continue;
+printf("%d", i);
+i++;
+}
+
+output: 1 2
+
+- in while loop,when the iteration meets the continue, it will directly go to while(condition) not the i++.
+
+eg:
+int i = 0;
+do
+{
+i++;
+if(i==2)
+continue;
+printf("%d", i);
+}
+while(i<=2);
+
+output: 1 3
+
+eg: 
+for(i =1; i<=3; i++)
+{
+for(j = 1; j<=5; j++)
+{
+if(j ==3)
+break;
+printf("%d", j);
+}
+}
+
+output: 1 2 1 2 1 2
