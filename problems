@@ -1,0 +1,77 @@
+//print prime number where user input of limit
+/*
+#include <stdio.h>
+int main() {
+    int limit, i, j, prime;
+    printf("Enter limit: ");
+    scanf("%d", &limit);
+    for (i = 2; i <= limit; i++)
+    {
+        prime = 1;
+        for (j = 2; j < i; j++) 
+        {
+            if (i % j == 0)
+            prime = 0;
+            break;
+        }
+        if (prime == 1)
+        printf("%d ", i);
+    }
+    return 0;
+}
+*/
+
+//guessing exact number assigned
+#include <stdio.h>
+int main() {
+    int num = 66, x;
+    printf("enter x: ");
+    scanf("%d", &x);
+    while(1)
+        {
+            if(x < 1 || x > 100)
+            {
+                printf("Out of range enter numbers between 1 to 100\n");
+                printf("Enter again: ");
+                scanf("%d", &x);
+            }
+            else if(x > num)
+            {
+                printf("num is lesser than %d\n", x);
+                printf("Enter again: ");
+                scanf("%d", &x);
+            }
+            else if(x < num)
+            {
+                printf("num is greater than %d\n", x);
+                printf("Enter again: ");
+                scanf("%d", &x);
+            }
+            else
+            {
+                printf("%d is Correct guess\n", x);
+                break;
+            }
+        }
+    return 0;
+}
+
+//28/10/26
+//pattern
+#include <stdio.h>
+int main() {
+    int i, j;
+    int k = 1; // alphabet counter
+    for (i = 1; i <= 4; i++) {
+        for (j = 1; j <= i; j++) {
+            if (k % 2 == 1) { // odd - Uppercase
+                printf("%c ", 'A' + k - 1);
+            } else { // even - lowercase
+                printf("%c ", 'a' + k - 1);
+            }
+            k++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
