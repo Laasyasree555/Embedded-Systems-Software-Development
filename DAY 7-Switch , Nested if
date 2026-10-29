@@ -79,3 +79,9 @@ break;
 -switch case is only applicable to int, char.
 
 -for float, double switch case cannot be used.
+
+- The case label should be an integral constant.
+eg: case 'A', case 'A' + 'B', case 10/2 = case 5
+- 2 different data types cannot be given in a case label.
+
+- every case label should be unique. No duplicate cases - causes errors.
