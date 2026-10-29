@@ -160,3 +160,128 @@ int main() {
 }
 return 0;
 }
+
+
+/*
+#include <stdio.h>
+int main() {
+    int i, j, n=4;
+    for(i=1; i<=4; i++)
+    {
+       for(j=1; j<=i; j++)
+       {
+        printf(" %d ", j);
+       }
+    printf("\n");
+}
+}
+*/
+
+/*
+#include <stdio.h>
+int main() {
+    int i, j, space, n=4;
+    for(i = 1; i<=4; i++)
+    {
+        for(space = 1; space<=(n-i); space++)
+        {
+            printf("-");
+        }
+        for(j = 1; j <= (2*i) - 1; j++)
+        {
+            printf("*");
+
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int i, j, space, n=4;
+    for(i = 1; i<=4; i++)
+    {
+        for(space = 1; space<=(n-i); space++)
+        {
+            printf("-");
+        }
+        for(j = 1; j <=i; j++)
+        {
+            printf("%d", j);
+
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+//28/10/26
+/*
+#include <stdio.h>
+int main() {
+    int i, j;
+    int k = 1; // alphabet counter
+    for (i = 1; i <= 4; i++) {
+        for (j = 1; j <= i; j++) {
+            if (k % 2 == 1) { // odd - Uppercase
+                printf("%c ", 'A' + k - 1);
+            } else { // even - lowercase
+                printf("%c ", 'a' + k - 1);
+            }
+            k++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    */
+//Assignment 6 LMS
+/*
+#include <stdio.h>
+int main() {
+    int n, i, j, space;
+    printf("Enter the number: ");
+    scanf("%d", &n);
+    for(i = 1; i<=n; i++)
+    {
+        for(j = 1; j<=n; j++)
+        {
+            if((i == j) || (i+j == n+1))
+            printf("%d", j);
+            else
+            {
+                printf("_");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int n, i, j, k, l;
+    printf("Enter the number: ");
+    scanf("%d", &n);
+    for(i = n; i >= 1; i--)
+    {
+        for(j = i; j<= n; j++)
+        {
+            printf(" %d ", j);
+        }
+        printf("\n");
+    }
+    for(k = 2; k<=n; k++)
+    {
+        for(l = k; l<=n; l++)
+        {
+            printf(" %d ", l);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    */
