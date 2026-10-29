@@ -1,0 +1,23 @@
+ARRAY: 
+datatype arr_name[size]
+eg: marks
+int marks[5]
+memory = no. of elements(size) * size of datatype
+memory = 5 * 4
+memory= 20 bytes, 160 bits
+
+- int, float - 4 bytes
+- char 1 byte
+- double - 8 bytes
+- 1 byte - 8 bits
+
+- In array indexing always starts from 0.
+eg: arr[5] = 0 to 4
+
+- array stores in continuous memory.
+
+- To initialize multiple elements in array
+arr[5] = {1, 2, 3, 4, 5}.
+
+
+- array problems are solved in array.c
