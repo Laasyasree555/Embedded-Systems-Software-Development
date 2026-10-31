@@ -22,3 +22,13 @@ arr[5] = {1, 2, 3, 4, 5}.
 
 - array problems are solved in array.c
 - added few more patterns problems in patterns.c
+
+eg: 
+int arr[100] = {1} 
+- As we given the size is 100 and the elements are 1, the array store the element and for remaining it store 0 values till the 100th size in the memory.
+
+int arr[] = {}
+- Here 0 bytes of memory is allocated, but the elements are stored in garbage values because as the arr[] is already created and the user doesnot store elements.
+
+int arr[] = {1, 2, 3}
+- Here the arr[] is created and the elements are stored. so the values stored in memory will be 1, 2, 3.
