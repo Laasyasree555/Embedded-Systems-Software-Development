@@ -1,0 +1,61 @@
+//Fibonacci series
+#include <stdio.h>
+int main() {
+    int limit, first = 0, second = 1, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &limit);
+    if(limit < 0)
+    {
+        printf("Invalid input\n");
+    }
+    while(limit >= sum)
+    {
+        printf(" %d ", sum);
+        first = second;
+        second = sum;
+        sum = first + second;
+    }
+    return 0;
+}
+
+//WAP to generate AP, GP, HP series
+
+#include <stdio.h>
+int main() {
+    int A, R, N, AP, GP, i;
+    float HP;
+    printf("Enter the First Number 'A': ");
+    scanf("%d", &A);
+    printf("Enter the Common Difference / Ratio 'R': ");
+    scanf("%d", &R);
+    printf("Enter the number of terms 'N': ");
+    scanf("%d", &N);
+    if(N < 0)
+    {
+        printf("Invalid input\n");
+    }
+    else
+    {
+        printf("\nAP = ");
+    for(i = 1; i<=N; i++)
+    {
+        AP = A + (i - 1) * R;
+        printf(" %d, ", AP);
+    }
+    printf("\nGP = ");
+    GP = A;
+    for(i = 1; i<=N; i++)
+    {
+        printf(" %d, ", GP);
+        GP = GP * R;
+    }
+    printf("\nHP = ");
+    for(i = 1; i <= N; i++)
+    {
+        AP = A + (i - 1) * R;
+        HP = (1.0/AP);
+        printf(" %f, ", HP);
+    }
+    }
+    return 0;
+}
