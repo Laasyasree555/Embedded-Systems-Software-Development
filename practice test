@@ -1,0 +1,337 @@
+/*
+#include <stdio.h>
+int main() {
+    int units, bill;
+    printf("Enter consumed units: ");
+    scanf("%d", &units);
+    if(units <= 100)
+    {
+        bill = (units * 2);
+    }
+    else if(units >= 101 && units <= 200)
+    {
+        bill = (100 * 2) + ((units - 100) * 3);
+    }
+    else if(units >= 201 && units <= 300)
+    {
+        bill = (100 * 2) + (100 * 3) + ((units - 100) * 5);
+    }
+    else if(units > 300)
+    {
+        bill = (100 * 2) + (100 * 3) + (100 * 5) + ((units - 100) * 7);
+    }
+    else
+    {
+        printf("Invalid\n");
+    }
+    printf("Electricity bill: %d\n", bill);
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int n, first, last, sum;
+    printf("Enter the number: ");
+    scanf("%d", &n);
+    last = n % 10;
+    while(n >= 10)
+    {
+        n = n/10;
+    }
+    first = n;
+    printf("sum: %d\n", first+last);
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int choice, quantity, price, total_amount;
+    printf("=====Food Menu=====\n");
+    printf("1. Pizza\n");
+    printf("2. Burger\n");
+    printf("3. Sandwich\n");
+    printf("4. Pasta\n");
+    printf("5. Ice cream\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    while(choice <= 5)
+    {
+        printf("Enter quantity: ");
+        scanf("%d", &quantity);
+    switch(choice)
+    {
+        case 1: 
+        printf("Item: Pizza\n");
+        price = 250;
+        break;
+        case 2: 
+        printf("Item: Burger\n");
+        price = 50;
+        break;
+        case 3: 
+        printf("Item: Sandwich\n");
+        price = 250;
+        break;
+        case 4:
+        printf("Item: Pasta\n");
+        price = 200;
+        break;
+        case 5:
+        printf("Item: Icecream\n");
+        price = 50;
+        break;
+        default: printf("Invalid choice!\nChoose between 1-5 options\n");
+        break;
+    }
+    printf("price per item = %d\n", price);
+    printf("Quantity = %d\n", quantity);
+    printf("Total Amount: Rs. %d\n", price * quantity);
+    return 0;
+}
+printf("Invalid choice!\nChoose between 1-5 options\n");
+return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int num, digit, largest = 0, second = 0;
+    printf("Enter the number: ");
+    scanf("%d", &num);
+    while(num > 0)
+    {
+        digit = num % 10;
+        if(digit > largest)
+        {
+            second = largest;
+            largest = digit;
+        }
+        else if(digit > second)
+        {
+            second = digit;
+        }
+        num = num / 10;
+    }
+    printf("Second largest number is: %d\n", second);
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int n, sum = 0, rem;
+    printf("Enter  the number: ");
+    scanf("%d", &n);
+    while(n > 0)
+    {
+        rem = n % 10;
+        if(rem % 2 == 0)
+        {
+            sum = sum + rem;
+        }
+        n = n/10;
+    }
+    printf("sum = %d\n", sum);
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int i, n, fact = 0, sum = 0, org, rem;
+    printf("Enter n value: ");
+    scanf("%d", &n);
+    org = n;
+    while(n > 0)
+    {
+        rem = n % 10;
+        fact = 1;
+        for(i = 1; i <= rem; i++)
+        {
+            fact = fact * i;
+        }
+        sum = sum + fact;
+        n = n/10;
+    }
+    if(sum == org)
+    {
+        printf("strong number\n");
+    }
+    else
+    {
+        printf("not a strong number\n");
+    }
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int n, sum = 0, i;
+    printf(("Enter the number: "));
+    scanf("%d", &n);
+    for(i = 1; i <= n; i++)
+    {
+        if(n % i== 0)
+        {
+            sum = sum + i;
+        }
+    }
+    printf("Sum of divisors: %d\n", sum);
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+    int i, j, n;
+    char ch = 'A', alpha;
+    printf("Enter n value: ");
+    scanf("%d", &n);
+    alpha= ch + n - 1;
+    for(i = 1; i <= n; i++)
+    {
+        ch = alpha;
+        for(j = i; j <= n; j++)
+        {
+            printf(" %c ", ch);
+            ch--;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+/*
+// Q 10 Harshad Number
+#include <stdio.h>
+int main(){
+    int num, org, sum=0, rem;
+    printf("Enter num: ");
+    scanf("%d", &num);
+    org = num;
+    while(num>0){
+        rem=num%10;
+        sum=sum+rem;
+        num=num/10;
+    }
+    if(org%sum==0){
+        printf("Harshad Number");
+    }
+    else{
+        printf("Not a Harshad Number");
+    }
+    return 0;
+}
+*/
+
+/*
+// Q11 Neon number
+#include<stdio.h>
+int main(){
+    int num,org,sum=0;
+    printf("Enter num: ");
+    scanf("%d",&num);
+    org=num;
+    num=num*num;
+    while(num>0){
+        int rem=num%10;
+        sum=sum+rem;
+        num=num/10;
+    }
+    if(org==sum){
+        printf("Neon Number");
+    }
+    else{
+        printf("Not a Neon Number");
+    }
+    return 0;
+}
+*/
+/*
+// Q 12 divisors of a number in descending order
+#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter num: ");
+    scanf("%d",&num);
+    for(int i=num;i>=1;i--){
+        if(num%i==0){
+            printf("%d ",i);
+        }
+    }
+    return 0;
+}
+*/
+/*
+// Q 13 Selective sum
+#include<stdio.h>
+int main(){
+    int num,sum=0;
+    printf("Enter num: ");
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++){
+        if(i%3==0&&i%5==0){
+            continue;
+        }
+        sum=sum+i;
+    }
+    printf("Selective sum %d",sum);
+    return 0;
+}
+
+*/
+
+
+/*
+// Q 14 Negative Fibonacci
+#include<stdio.h>
+int main(){
+    int num,n1=0,n2=1,n3=0;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    if(num>0){
+        printf("Invalid input");
+        return 0;
+    }
+    while(n3>=num){
+        printf("%d ",n3);
+        n1=n2;
+        n2=n3;
+        n3=n1-n2;
+        if((n3)>(-1*num)){
+            break;
+        }
+    }
+    return 0;
+}
+*/
+
+
+/*
+// Q 15 perfect number
+#include<stdio.h>
+int main(){
+    int num,sum=0;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    if(num<0){
+        printf("Error : Invalid Input, Enter only positive number");
+        return 0;
+    }
+    for(int i=1;i<=num/2;i++){
+        if(num%i==0){
+            sum=sum+i;
+        }
+    }
+    if(num==sum&&num!=0){
+        printf("Yes, entered number is perfect number");
+    }
+    else{
+        printf("No, entered number is not a perfect number");
+    }
+    return 0;
+}
+*/
