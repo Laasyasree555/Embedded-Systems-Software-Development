@@ -1,4 +1,5 @@
 /*
+//Electricity bill
 #include <stdio.h>
 int main() {
     int units, bill;
@@ -28,6 +29,8 @@ int main() {
     return 0;
 }
 */
+
+//sum of first and last digit in an integer
 /*
 #include <stdio.h>
 int main() {
@@ -44,6 +47,9 @@ int main() {
     return 0;
 }
 */
+
+
+//food menu
 /*
 #include <stdio.h>
 int main() {
@@ -94,6 +100,9 @@ printf("Invalid choice!\nChoose between 1-5 options\n");
 return 0;
 }
 */
+
+
+//second largest digit in an integer
 /*
 #include <stdio.h>
 int main() {
@@ -118,6 +127,9 @@ int main() {
     return 0;
 }
 */
+
+
+//sum of all even digits in an integer
 /*
 #include <stdio.h>
 int main() {
@@ -137,6 +149,8 @@ int main() {
     return 0;
 }
 */
+
+//Strong number - sum of factorial of all digits should be equal to the original number
 /*
 #include <stdio.h>
 int main() {
@@ -166,6 +180,8 @@ int main() {
     return 0;
 }
 */
+
+//sum of all divisors of an integer
 /*
 #include <stdio.h>
 int main() {
@@ -183,6 +199,9 @@ int main() {
     return 0;
 }
 */
+
+
+//Triangular pattern of alphabets
 /*
 #include <stdio.h>
 int main() {
@@ -204,8 +223,10 @@ int main() {
     return 0;
 }
 */
+
+
 /*
-// Q 10 Harshad Number
+// Q 10 Harshad Number -   Example: 18 → Yes, because (18 div 9 = 2).
 #include <stdio.h>
 int main(){
     int num, org, sum=0, rem;
@@ -227,8 +248,10 @@ int main(){
 }
 */
 
+
+
 /*
-// Q11 Neon number
+// Q11 Neon number - Example: 9 → Yes, because (9^2=81) and (8+1=9)
 #include<stdio.h>
 int main(){
     int num,org,sum=0;
@@ -250,8 +273,10 @@ int main(){
     return 0;
 }
 */
+
+
 /*
-// Q 12 divisors of a number in descending order
+// Q 12 divisors of a number in descending order - Example: 12 → 12 6 4 3 2 1.
 #include<stdio.h>
 int main(){
     int num;
@@ -265,8 +290,10 @@ int main(){
     return 0;
 }
 */
+
+
 /*
-// Q 13 Selective sum
+// Q 13 Selective sum -   Example: For N = 50, exclude the numbers 15,30,and 45 because they are divisible by both 3 and 5.
 #include<stdio.h>
 int main(){
     int num,sum=0;
