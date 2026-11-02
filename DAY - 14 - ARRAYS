@@ -32,3 +32,7 @@ int arr[] = {}
 
 int arr[] = {1, 2, 3}
 - Here the arr[] is created and the elements are stored. so the values stored in memory will be 1, 2, 3.
+
+- name of the array will give "base address".
+- cannot remove elements from array. array is fixed.
+- replacing is possible.
