@@ -1,0 +1,104 @@
+Operators:
+1)
+#include <stdio.h>
+int main() {
+    int x = 0, y = 2;
+    if(x++ && y++)
+    printf("True\n");
+    else
+    printf("False\n");
+
+    printf("%d %d\n", x, y);
+}
+
+output: 
+False
+1 2
+- Because in AND operator both the conditions must be true, but here when it checks the first condition it is not true because zero value is always false. 
+- As the first condition is false it doesnot check the second condition and only increments x but not y value.
+- This condition is called short-circuiting.
+
+- any non-zero value is true.
+- zero value is always false.
+
+2)
+#include <stdio.h>
+int main() {
+    int x = 0, y = 0;
+    if(x && (y = 10))
+    printf("True\n");
+    else
+    printf("False\n");
+
+    printf("%d %d\n", x, y);
+}
+
+output:
+False
+0 0
+- Here also the condition is false because of '0'. so it doesnot check the second condition.
+- And most importantly, it does not give priority to brackets.
+- in AND and OR operators the priority always goes for condition 1 and then condition 2.
+
+3)
+#include <stdio.h>
+int main() {
+    int x = 1, y = 0;
+    if(x || (y = 10))
+    printf("True\n");
+    else
+    printf("False\n");
+
+    printf("%d %d\n", x, y);
+}
+
+output:
+True
+1 0
+- Because in OR operator it checks only 1 conditions if the condition1 is true it doesnot check for another.
+- so it does not update the value of condition 2.
+
+4)
+int a = 3, b =5, c = 2, d= 0;
+printf("%d", 3 || (b - 5 * 3) + c && a % 3);
+
+output:
+1
+- Because the priority goes to the first operator in the program.
+- since the first operator is OR(||). and 3 is a non-zero value.
+- So the output is "1".
+- Return value of OR operator will always be 1 or 0.
+- refer notes for more examples.
+
+NOT(!) Operator:
+!0 = 1
+!any number = 0
+
+eg:
+1)
+x = 10
+x = !x
+x = 0
+
+2)
+x = 5
+!x
+x = 5
+- here we are not storing the updated x value in x. so it is unchanged.
+
+SIZEOF() Operator:
+- It isa compile time operator.
+- unary operator.
+- it also works withou the brackets only for variables and values but not for data types.
+eg: 
+sizeof(float)
+output: 4 (in bytes)
+
+- unsigned long integers(int) - return value of size of operator.
+
+- By default all the real numbers are 'double'. if you want float value, we should declare.
+eg: 
+sizeof(2.5f)
+output: 4 (in bytes)
+
+sizeof(); - error, expected an expression before ')' token.
