@@ -220,4 +220,4 @@ int main() {
 }
 */
 
-- Bubble sort: compare
+- Bubble sort: compare 2 adjacent elements and swap if its wrong(based on the condition)
