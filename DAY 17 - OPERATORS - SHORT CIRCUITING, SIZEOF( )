@@ -102,3 +102,122 @@ sizeof(2.5f)
 output: 4 (in bytes)
 
 sizeof(); - error, expected an expression before ')' token.
+
+
+//03/11/2026
+
+//WAP to find unique values in an array
+/*
+#include <stdio.h>
+int main() {
+    int i, j, k = 0, duplicate = 0, size;
+    printf("Enter the size: ");
+    scanf("%d", &size);
+    int arr1[size], arr2[size];
+    printf("Enter the elements of array1: ");
+    for(i = 0; i < size; i++)
+    {
+        scanf("%d", &arr1[i]);
+    }
+    for(i = 0; i < size; i++)
+    {
+        duplicate = 0;
+    for(j = 0; j < k; j++)
+    {
+        if(arr1[i] == arr2[j])
+        {
+        duplicate = 1;
+        break;
+        }
+    }
+    if(duplicate == 0)
+    {
+        arr2[k] = arr1[i];
+        k++;
+    }
+}
+     for(j = 0; j < k; j++)
+    {
+        printf(" %d ", arr2[j]);
+    }
+return 0;
+}
+*/
+
+
+// WAP to count the element in an array - how many times each element is repeating
+/*
+#include <stdio.h>
+int main() {
+    int size, i, j;
+    printf("Enter size: ");
+    scanf("%d", &size);
+    int arr[size], dup[size], ind = 1, flag = 0, count = 0;
+    
+    for(i = 0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    dup[0] = arr[0];
+    for(i = 1; i < size; i++)
+    {
+        flag = 0;
+        for(j = 0; j < ind; j++)
+        {
+            if(arr[i] == dup[j]){
+            flag = 1;
+            break;
+        }
+        }
+        if(flag == 0)
+    {
+        dup[ind++] = arr[i];
+    }
+}
+for (i = 0; i < ind; i++)
+{
+    count = 0;
+    for (j = 0; j < size; j++)
+    {
+        if(dup[i] == arr[j])
+        {
+        count++;
+        }
+    }
+    printf("%d - %d times", dup[i], count);
+}
+}
+*/
+
+//WAP to sort array elements in an ascending order
+/*
+#include <stdio.h>
+int main() {
+    int size, i, j, temp = 0;
+    printf("Enter the size: ");
+    scanf("%d", &size);
+    int arr[size];
+    printf("Enter array elements: ");
+    for(i = 0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for(i = 0; i<size; i++)
+    {
+        for(j = i + 1; j < size; j++)
+        {
+            if(arr[i] > arr[j])
+            {
+                temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+- Bubble sort: compare
