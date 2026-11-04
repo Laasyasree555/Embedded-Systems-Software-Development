@@ -1,1 +1,96 @@
+COMMA OPERATOR ( , ):
+- This operator has least priority according to the associativity.
+- Comma operator can also used in both brackets and without brackets.
+- If we are using comma inside brackets (,) - it performs as an operator.
+- Without brackets ',' it performs as a seperator.
+- In operator it considers only the right most variable/element in the function/condition. (last one)
+- In seperator it considers the left most variable/element in the function/condition. (first one)
+eg:
+seperator:
+a = 10, 20, 30
+output:
+a = 10
 
+operator:
+b = (10, 20, 30)
+output:
+b = 30
+
+eg:
+x=1, y=1
+int a, b;
+a = x++, ++x, x--;
+b = (y++, ++y, y--);
+printf("%d %d %d %d", a, b, x, y);
+output:
+a = 1, b = 3, x = 2, y = 2
+
+eg:
+a = 10, b = 0, c = -1;
+if(a, c, b)
+printf("True");
+else
+printf("False");
+
+output:
+False
+- Because comma acts as operator it considers only the rightmost value. 
+- here 'b' is 0, so 0 is always false.
+
+eg:
+int i, j;
+for( i = j = 1; i < 2, j<=4; i++, j++)
+printf("i = %d j= %d", i, j);
+
+output:
+i  j
+1  1
+2  2
+3  3
+4  4
+
+- it doesnot matter even if the i value com=ndition is false, operator only considers the right most value.
+
+eg:
+for(i = 1, j = 5; i <= 3, j<=5; i++, j--)
+output:
+Infinity loop.
+
+eg: 
+for(i = 1, j=1; i; printf("i = %d", i))
+i = j++ <= 3;
+
+output:
+1 1 1 0
+
+eg:
+i = sizeof(2, 2.3f, 5.6)
+printf("%d", i);
+output:
+8
+- By default, all the real numbers are double.
+- size of double is 8 bytes
+- so the output is 8.
+
+
+TERNARY OPERATOR: (? :)
+- It is similar to if-else condition.
+eg:
+check whether the number is odd or even
+
+num%2==0? printf("Even") : printf("Odd');
+- here ? acts as if
+- and : acts as else
+
+eg:
+check which number is largest
+
+n1> n2? printf("n1 is largest") : printf("n2 is largest");
+
+eg:
+check which is highest in given 3 integers
+- nested if
+n1 > n2 ? n1 > n3? printf("n1 is largest") : printf("n3 is largest") : n2 > n3? printf("n2 is largest") : printf("n3 is largest");
+- first grouping will happen, associativity for operators is "right - to - left"
+- so the conditions are checked according to the associativity and generates the output.
+- inside ternary operator we cannot use keywords(like break , continue, int, etc)
