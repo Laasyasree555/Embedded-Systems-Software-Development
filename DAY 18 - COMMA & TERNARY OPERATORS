@@ -5,6 +5,7 @@ COMMA OPERATOR ( , ):
 - Without brackets ',' it performs as a seperator.
 - In operator it considers only the right most variable/element in the function/condition. (last one)
 - In seperator it considers the left most variable/element in the function/condition. (first one)
+
 eg:
 seperator:
 a = 10, 20, 30
@@ -75,6 +76,7 @@ output:
 
 TERNARY OPERATOR: (? :)
 - It is similar to if-else condition.
+
 eg:
 check whether the number is odd or even
 
@@ -90,7 +92,9 @@ n1> n2? printf("n1 is largest") : printf("n2 is largest");
 eg:
 check which is highest in given 3 integers
 - nested if
+
 n1 > n2 ? n1 > n3? printf("n1 is largest") : printf("n3 is largest") : n2 > n3? printf("n2 is largest") : printf("n3 is largest");
+
 - first grouping will happen, associativity for operators is "right - to - left"
 - so the conditions are checked according to the associativity and generates the output.
 - inside ternary operator we cannot use keywords(like break , continue, int, etc)
