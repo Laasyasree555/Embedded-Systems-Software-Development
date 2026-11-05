@@ -50,28 +50,33 @@ Unsigned :
 - %hd : (short)
 - used to print the output in 16 bits/ 2 bytes
 
--%hhd :
+- %hhd :
 - used to print the output in 8 bits/ 1 byte.
 
--%u : (Unsigned int)
+- %u : (Unsigned int)
 - used to print the output in 32 bits/ 4 bytes
 - only used for unsigned data type
 
-%hu : (Unsigned short)
+- %hu : (Unsigned short)
 - used to print the output in 16 bits/ 2 bytes.
 
--%hhu :
+- %hhu :
 - used to print the output in 8 bits/ 1 byte.
 
-%ld: (long)
-- %lu: (Unsigned long)
+- %ld : (long)
+
+- %lu : (Unsigned long)
 
 - %Lf : (long double)
+
 - %lf : double
+
 - %o : octal
 - to store octal value: int n = o(value)
 
-%x - hexa(lowercase)
-%X - hexa(UPPERCASE)
+- %x : hexa(lowercase)
+
+- %X : hexa(UPPERCASE)
 - to store hexa value: int n = ox(value)
- to store binary value: int n = ob(value)
+
+- to store binary value: int n = ob(value)
