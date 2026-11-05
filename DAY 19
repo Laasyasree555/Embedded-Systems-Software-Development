@@ -1,0 +1,77 @@
+MODIFIERS:
+1) Size - short, long
+2) Sign - signed, unsigned
+- Modifiers are only for int, char.
+
+
+short :
+- Signed General Range (n bits): (-2^{n-1}) to (2^{n-1} - 1)
+- Unsigned General Range (n bits): 0 to (2^n - 1)
+- used to reduce the size of a datatype.
+- Applicable/used only for int.
+- maximum size it reduces is upto 2 bytes.
+- That is, 4 bytes to 2bytes in int.
+- Total 16 bits, 1 bit is allocated for sign and remaining 7 bits to store value.
+- short and long both are datatypes.
+
+long :
+- Signed General Range (n bits): (-2^{n-1}) to (2^{n-1} - 1)
+- Unsigned General Range (n bits): 0 to (2^n - 1)
+- used to increase the size of a datatype.
+- Applicable/used only for int and double.
+
+
+long long:
+- Applicable/used only for int.
+- its size depends on the complier we are using.
+
+signed :
+- Signed General Range (n bits): (-2^{n-1}) to (2^{n-1} - 1)
+- It can store both positive and negative values.
+- By default, all variables are in signed.
+- overflow: when the given value is out of maximum value in the range, then value - 2^n
+- underflow: when the given value is out of minimum value in the range, then value + 2^n
+
+
+Unsigned :
+- Unsigned General Range (n bits): 0 to (2^{n} - 1)
+- It can store only positive values.
+- If we want the unsigned input we should declare.
+- overflow: when the given value is out of maximum value in the range, then value - 2^n
+- underflow: when the given value is out of minimum value in the range, then value + 2^n
+
+
+-how many bytes should print in the output decided by format specifier only.
+
+- %d : (int)
+- print the output in 32 bits/ 4 bytes
+- prints both positive and negative values.
+
+- %hd : (short)
+- used to print the output in 16 bits/ 2 bytes
+
+-%hhd :
+- used to print the output in 8 bits/ 1 byte.
+
+-%u : (Unsigned int)
+- used to print the output in 32 bits/ 4 bytes
+- only used for unsigned data type
+
+%hu : (Unsigned short)
+- used to print the output in 16 bits/ 2 bytes.
+
+-%hhu :
+- used to print the output in 8 bits/ 1 byte.
+
+%ld: (long)
+- %lu: (Unsigned long)
+
+- %Lf : (long double)
+- %lf : double
+- %o : octal
+- to store octal value: int n = o(value)
+
+%x - hexa(lowercase)
+%X - hexa(UPPERCASE)
+- to store hexa value: int n = ox(value)
+ to store binary value: int n = ob(value)
