@@ -1,10 +1,12 @@
 MODIFIERS:
+
 1) Size - short, long
 2) Sign - signed, unsigned
 - Modifiers are only for int, char.
 
 
 short :
+
 - Signed General Range (n bits): (-2^{n-1}) to (2^{n-1} - 1)
 - Unsigned General Range (n bits): 0 to (2^n - 1)
 - used to reduce the size of a datatype.
@@ -15,6 +17,7 @@ short :
 - short and long both are datatypes.
 
 long :
+
 - Signed General Range (n bits): (-2^{n-1}) to (2^{n-1} - 1)
 - Unsigned General Range (n bits): 0 to (2^n - 1)
 - used to increase the size of a datatype.
@@ -22,10 +25,12 @@ long :
 
 
 long long:
+
 - Applicable/used only for int.
 - its size depends on the complier we are using.
 
 signed :
+
 - Signed General Range (n bits): (-2^{n-1}) to (2^{n-1} - 1)
 - It can store both positive and negative values.
 - By default, all variables are in signed.
@@ -34,6 +39,7 @@ signed :
 
 
 Unsigned :
+
 - Unsigned General Range (n bits): 0 to (2^{n} - 1)
 - It can store only positive values.
 - If we want the unsigned input we should declare.
