@@ -1,0 +1,50 @@
+TYPE CASTING or TYPE CONVERSION:
+- changing a datatype to another datatype is called type casting.
+- There are 2 types of type casting:
+1) Implicit - done by complier
+2) Explicit - done by user/programmer
+
+eg:
+- this is not correct format
+int n1, n2;
+int res = n1/n2;
+output: 1
+- because bothe the variables are in same data type(int)
+
+float res = 3/2 = 1.000000
+
+- correct format
+(float) n1/ (float) n2 = 1.5
+- only for this line in the program the data type is changed.
+
+- In Implicit - expression, assign, compare
+
+- Type promotion - low to high - eg: int to double
+- Type demotion - high to low - eg: double to char.
+ eg: int n = 98.6 - type demotion because, all the real number are by default 'double' and we are storing double in int.(high to low)
+
+- Expression, compare, sometimes assign - type promotion
+- Assign - mostly type demotion
+
+eg: int n1 = -1   //by default it is signed, stores both positive and negative values
+    unsigned int n2 = 4
+    if(n1 < n2)
+    printf("True");
+    else
+    printf("False");
+
+output: False
+- here signed int is lower than unsigned int 
+- n1 changes to n2, but -1 comes under underflow.
+- so it will "-1 + 2^32" (value - 2^n) which is not less than n2(unsigned int)
+- so the output is "false".
+
+eg:
+if(n1 < (signed int) n2)
+printf("True");
+else
+printf("False");
+
+output: True
+- here the n2 is changed to signed int from unsigned int.
+- so the output is "true".
