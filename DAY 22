@@ -1,0 +1,335 @@
+A1 - WAP to find the middle number (by value) of given 3 numbers
+Description : 
+
+you should read three intergers from user and find the middle number 
+
+Sample Execution : 
+
+Test case 1 : 
+
+Enter the Three numbers : 10 20 30
+
+The middle number is 20
+
+Test case 2 :
+
+Enter the Three numbers : 43 10 25
+
+The middle number is 25
+
+program:
+#include <stdio.h>
+int main() {
+    int num1, num2, num3;
+    printf("Enter num1, num2, num3: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    if(num1 > num2)
+    {
+        if(num1 < num3)
+        {
+            printf("The middle number is %d\n", num1);
+        }
+        else if(num2 > num3)
+        {
+            printf("The middle number is %d\n", num2);
+        }
+        else
+        {
+            printf("The middle number is %d\n", num3);
+        }
+    }
+    else
+    {
+        if(num2 > num1)
+        {
+            if(num2 < num3)
+            {
+                printf("The middle number is %d\n", num2);
+            }
+            else if(num1 > num3)
+            {
+                printf("The middle number is %d\n", num1);
+            }
+            else
+            {
+                printf("The middle number is %d\n", num3);
+            }
+        }
+    }
+}
+
+A2 - WAP to find which day of the year
+Description:
+
+Suppose, in a week let us assume first day is 'Sunday', then second day will be 'Monday' and so on. If first day is 'Monday' then the second day will be 'Tuesday' and so on.
+Pr-requisites:-
+
+Arithmetic operators
+Switch Case
+Objective: -
+
+To understand the concept of Switch Case
+Inputs: -
+      Positive integer say 'N'. Where 1 <= 'N' <= 365.
+      1 <= Starting day <= 7
+      Option to set the first day.
+
+Example :
+
+       Where start_day = Wednesday
+       Nth day = 5
+       5th day of the year is Monday
+
+Sample execution: -
+Test Case 1:
+user@emertxe] ./day_of_the_year
+Enter the value of 'n' : 9
+Choose First Day :
+1. Sunday
+2. Monday
+3. Tuesday
+4. Wednesday
+5. Thursday
+6. Friday
+7. Saturday
+Enter the option to set the first day : 2
+The day is Tuesday
+Test Case 2:
+Enter the value of 'n' : 9
+Choose First Day :
+1. Sunday
+2. Monday
+3. Tuesday
+4. Wednesday
+5. Thursday
+6. Friday
+7. Saturday
+Enter the option to set the first day : 3
+The day is Wednesday
+Test Case 3: 
+Enter the value of 'n' : 9
+
+Choose First Day :
+
+1. Sunday
+2. Monday
+3. Tuesday
+4. Wednesday
+5. Thursday
+6. Friday
+7. Saturday
+
+Enter the option to set the first day : 8
+Error: Invalid input, first day should be > 0 and <= 7
+Test Case 4:
+
+Enter the value of 'n' : 0
+Error: Invalid Input, n value should be > 0 and <= 365
+Test Case 5:
+Enter the value of 'n' : 366
+Error: Invalid Input, n value should be > 0 and <= 365
+
+program:
+#include <stdio.h>
+int main() {
+    int start_day, nth_day, day;
+    printf("enter n value: ");
+    scanf("%d", &nth_day);
+    if(nth_day >= 1 && nth_day <= 365)
+    {
+        printf("Choose first_day: \n");
+        printf("1. Sunday\n");
+        printf("2. Monday\n");
+        printf("3. Tuesday\n");
+        printf("4. Wednesday\n");
+        printf("5. Thursday\n");
+        printf("6. Friday\n");
+        printf("7. Saturday\n");
+        printf("Enter option of start_day: ");
+        scanf("%d", &start_day);
+        if((start_day>0) && (start_day<= 7))
+        {
+            day = ((start_day + nth_day) - 1)% 7;
+        }
+        else
+        {
+            printf("Error: Invalid input, first day should be > 0 and <= 7\n");
+            
+        }
+            switch(day)
+        {
+            case 1: printf("The day is Sunday\n");
+            break;
+            case 2: printf("The day is Monday\n");
+            break;
+            case 3: printf("The day is Tuesday\n");
+            break;
+            case 4: printf("The day is Wednesday\n");
+            break;
+            case 5: printf("The day is Thursday\n");
+            break;
+            case 6: printf("The day is Friday\n");
+            break;
+            case 0: printf("The day is Saturday\n");
+            break;
+        }
+    }
+       else
+       {
+           printf("Error: Invalid input, n value should be > 0 and <= 365\n");
+           
+       }
+    return 0;
+}
+
+A3 - WAP to generate positive Fibonacci numbers
+Description:
+
+• In mathematics, the Fibonacci numbers or Fibonacci sequence are the numbers in the following integer sequence 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 . . . OR 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 . . .
+
+• By definition, the first two numbers in the Fibonacci sequence are 0 and 1, each subsequent number is the sum of the previous two
+
+Pr-requisites:-
+
+• Loops
+
+• Operators
+
+Objective: -
+
+To understand the concept of
+
+◦ Continuos looping.
+
+◦ If-else constructs
+
+Inputs: -
+
+A integer say 'N' 
+
+Sample execution: -
+
+Test Case 1 :
+
+user@emertxe] ./fibbonacci_series
+
+Enter a number: 8
+
+0 1 1 2 3 5 8
+
+Test Case 2:
+
+Enter a number: 10
+
+0 1 1 2 3 5 8
+
+Test Case 3:
+
+Enter a number: 21
+
+0 1 1 2 3 5 8 13 21
+
+Test Case 4:
+
+Enter a number: -21
+
+Invalid input
+
+program:
+#include <stdio.h>
+int main() {
+    int limit, first = 0, second = 1, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &limit);
+    if(limit < 0)
+    {
+        printf("Invalid input\n");
+    }
+    while(limit >= sum)
+    {
+        printf(" %d ", sum);
+        first = second;
+        second = sum;
+        sum = first + second;
+    }
+    return 0;
+}
+
+
+A4 - WAP to check if number is perfect or not
+Description:
+
+• In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum).
+
+• Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
+
+Example:
+
+• The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6. Equivalently, the number 6 is equal to half the sum of all its positive divisors: ( 1 + 2 + 3 + 6 ) / 2 = 6
+
+• The next perfect number is 28 = 1 + 2 + 4 + 7 + 14. This is followed by the perfect numbers 496 and 8128
+
+Pr-requisites:-
+
+• Loops
+
+• Operators
+
+Objective: -
+
+• To understand the concept of
+
+•  If-else constructs
+
+Inputs: -
+
+A positive integer say 'N'.
+Sample execution: -
+
+Test Case 1:
+
+Enter a number: 6
+
+Yes, entered number is perfect number
+
+Test Case 2:
+Enter a number: 10
+
+No, entered number is not a perfect number
+
+Test Case 3:
+Enter a number: -1
+
+Error : Invalid Input, Enter only positive number
+
+program:
+
+#include <stdio.h>
+int main() {
+    int n, sum = 0, i;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if(n < 0)
+    {
+        printf("Error: Invalid Input, Enter only positive number\n");
+    }
+    else
+    {
+    for(i = 1; i < n; i++)
+    {
+        if(n % i == 0)
+        {
+            sum = sum + i;
+        }
+    }
+    if(sum == n)
+    {
+        printf("Yes, entered number is perfect number\n");
+    }
+    else
+    {
+        printf("No, entered number is not a perfect number\n");
+    }
+    }
+    return 0;
+}
