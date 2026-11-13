@@ -1,0 +1,201 @@
+FUNCTIONS:
+-Block of code used to perform specific operations/tasks.
+
+PROPERTIES:
+1) Take input
+2) perform operation
+3) gives output
+eg: x = 5 - x+1 - 6
+- here no need to mention "x+1" everytime we give the new input.
+- no need to mention block of code everytime the input changes.
+- printf, scanf, main are functions.
+
+TYPES OF FUNCTIONS:
+1) Library funtions:
+eg: <stdio.h> , by mentioning the header file we are using it.
+2) User defined funtions:
+Fuction definition: 
+syntax: 
+return datatype function_name(parameters/arguements/ inputs)
+-block of code(function) does not automatically execute, we should call it.
+
+Function Call:
+-By using function call, we can give a call for execution.
+syntax:
+function_name(give inputs)
+- input should be given in variables names, numbers but should not give datatypes.
+eg: 
+add(10, 20)
+add(n1, n2)
+should not give like this: 
+add(int 10, int 20)
+
+eg:
+//add of 2 numbers using functions
+
+/*
+#include <stdio.h>
+int add(int n1, int n2) //function definition
+{
+    int sum = n1 + n2;
+    return sum;
+}
+int main() {
+    int a, b;
+    //printf("enter 2 numbers: ");
+    scanf("%d %d", &a, &b);
+    int sum = add(a, b); //function call
+    printf("%d\n", sum);
+    return 0;
+}
+    */
+
+
+
+//average of 3 numbers using fuctions
+
+/*
+#include <stdio.h>
+float average(int n1, int n2, int n3)
+{
+    float avg = (n1+n2+n3)/3.0;
+    return avg;
+}
+int main() {
+    int n1, n2, n3;
+    float avg;
+    scanf("%d %d %d", &n1, &n2, &n3);
+    avg = average(n1, n2, n3);
+    printf("%f\n", avg);
+}
+*/
+
+
+//even or odd
+
+/*
+#include <stdio.h>
+int even_odd(int n)
+{
+    if(n%2 == 0)
+    return 0;
+    else
+    return 1;
+}
+int main() {
+    int n, res;
+    scanf("%d", &n);
+    res = even_odd(n);
+    if(res == 0)
+    printf("Even\n");
+    else
+    printf("Odd\n");
+    return 0;
+}
+*/
+
+
+//prime or not
+
+/*
+#include <stdio.h>
+int prime_or_not(int n)
+{
+    int flag = 0;
+    for(int i = 2; i < n; i++)
+    {
+    if(n%i == 0)
+    {
+        flag = 1;
+        break;
+    }
+    }
+    if(flag == 0)
+    return 1;
+    else
+    return 0;
+}
+int main() {
+    int n, res;
+    scanf("%d", &n);
+    res = prime_or_not(n);
+    if(res == 0)
+    printf("not prime\n");
+    else
+    printf("prime\n");
+    return 0;
+}
+*/
+
+- OS will call the main function(int main()), return 0 at the end of the program takes back to OS itself.
+- statements mentioned after return statement in function definition are not considered.
+Context Switching:
+- after mentioning #include <stdio.h> the code directly goes to int main() {}.
+- whenever the function call is mentioned in the main block of code, then function definition block of code is executed.
+- when ever it reaches the return statement in function block, it comes back to main block to function call.
+- then the values of the function call gets updated.
+- then the output gets printed.
+- This process is called "Context Switching".
+
+MEMORY SEGMENT:
+- Many processes can be done in user space, which is taken care by the OS.
+- Memory is divided into  segments
+1) Stack
+2) Heap
+3) Data
+4) Code
+
+- Heap is used to store the dynamic memory.
+- Constants are stored in Code.
+- Local variables(int i, int n, etc) and function memory(whatever inside the function block) is stored Stack.
+
+STACK FRAME:
+- Main block anf function block both has sepearte stack frames
+- once the output is printed(when in both blocks reaches its return statements), both the stack frames are automatically deleted.
+- If we give new inputs , then new stack frames will be created.
+- Address of both stack frames is also different.
+- So no need to give same variables in both blocks.
+- output is considered based on the function_name,so it should be mentioned same in both blocks.
+- Stack frame consists of:
+1) Local variables - int i, int n, etc
+2) Return Address 
+- Address of the function block is main, because main block is calling the function.
+- Address of the function block is OS, because OS is calling the main block to execute.
+3) Parameters List(PL) - Inputs of funtion(n1, n2, etc)
+- refer notes for more examples.
+
+- If we are mentioning void as return datatype, the no need to mention return keyword in function block. we can give printf statement here itself.
+eg:
+#include <stdio.h>
+void even_odd(int n)
+{
+    if(n%2 == 0)
+    printf("Even\n");
+    else
+    printf("Odd\n");
+}
+int main() {
+    int n, res;
+    scanf("%d", &n);
+    even_odd(10);
+    return 0;
+}
+
+output: Even
+
+eg: 
+int fun(int n)
+{
+n = 20;
+return n;
+}
+int main()
+{
+int x = 10; 
+fun(x);
+printf("%d", x);
+}
+
+output: 10
+- This type of cases are called ignoring the return value.
+- because we rae not storing the return value in main block, so it is not considered in main block.
