@@ -1,0 +1,123 @@
+PASS BY VALUE:
+1) This method copies the actual value of an argument into formal argument of the function.
+2) In this case, changes made to the parameter inside the function have no effect on the actual argument.
+
+PASS BY REFERENCE:
+1) Method copies the address of an argument into the formal parameter.
+2) Inside function, the address is used to acces the actual argument used in the call. This means that changes made to the parameter affects the argument.
+
+POINTERS:
+Pointer is a special variable used to store the address of an another variable to perform pass by reference.
+
+eg: 
+If we want to access the LED we cannot access it without its address.
+
+WHY POINTERS?
+1) To access the address of a variable.
+2) To perform pass by reference.
+
+Declaration of pointer:
+datatype *ptr_name;
+- *ptr_name, helps to store the address of the datatype.
+* - helps to understand the level of the pointer
+* - first-level pointer
+* * - second - level pointer
+
+- if i want to store the address of a variable:
+eg:
+int n = 10;
+int *iptr = &n; 
+output: 4
+-stores the address of "n"
+char ch = 'A';
+char *cptr = &ch; 
+output: 1
+-stores the address of "ch"
+
+-Address size and pointer size remains same for all datatypes and pointers.
+- It is 4/8 bytes depends on the bitness of the systems.
+- 32-bit system = 4 bytes
+- 64-bit systems = 8 bytes
+- most of our systems are 64-bit so size is 8 bytes.
+
+RULES OF POINTERS:
+1) Pointer is an integer
+eg:
+int n =10; //this integer is value
+int *iptr = 5; //this integer is address, whatever is stored inside pointer is an address
+- both looks like an integer, but can be differentiated by bus.(data bus, address bus)
+- whatever we are putting inside databus - integer
+- whatever we are putting inside address bus - pointer
+eg:
+int n = 10;
+printf("%p\n, &n);
+%p - to print the starting address of the variable
+
+2) Referencing & Dereferencing
+- Referencing - for getting the address(&)
+- Dereferencing - going inside the address to see the value (*)
+eg:
+int n = 10;
+int *iptr = &n; //&n - referencing
+printf("%d\n, *iptr); // *ptr -dereferencing
+ output: 10
+
+- check notes for boxes.
+- In printf "*" is used to get the value inside the address
+- In int *iptr "*" is used to know the level of the pointer.
+- when we gave *ptr, it goes to the address stored in pointer and return the value stored in that address.
+- *ptr eg: *1000 = 10
+
+eg: 
+int n= 5;
+int *ptr = &n;
+*ptr = 10;
+printf("%d", n);
+output = 10
+-here we are changing the value inside the address of n using dereferencing.
+
+3) Pointing means containing
+
+4) Types of pointers
+- %p - prints always from highes to lowest address
+eg:
+int n = 0x12345678;
+int *ptr = 12345678
+char *ptr = 78
+short *ptr = 5678
+- refer notes for more clarification.
+
+eg:
+//swap 2 integers using pointers
+/*
+#include <stdio.h>
+void swap(int *n1, int *n2)
+{
+    int temp = *n1;
+    *n1 = *n2;
+    *n2 = temp;
+    printf("n1:%d\nn2:%d\n", *n1, *n2);
+}
+int main() {
+    int n1, n2;
+    scanf("%d %d", &n1, &n2);
+    swap(&n1 , &n2);
+    return 0;
+}
+*/
+
+//sum and average using pointer and functions
+#include <stdio.h>
+void sum_avg(int n1, int n2, int *sum, float *avg)
+{
+    *sum = n1 + n2;
+    *avg = *sum /2.0;
+}
+int main() {
+    int n1, n2, sum; 
+    float avg;
+    scanf("%d %d", &n1, &n2);
+    sum_avg(n1, n2, &sum, &avg);
+    printf("sum: %d\navg: %f\n", sum, avg);
+    return 0;
+}
