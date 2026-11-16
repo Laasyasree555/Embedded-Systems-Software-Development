@@ -21,6 +21,7 @@ return datatype function_name(parameters/arguements/ inputs)
 
 Function Call:
 -By using function call, we can give a call for execution.
+- Except keywords(int, char, etc) we can give any name to function_name.
 syntax:
 function_name(give inputs)
 - input should be given in variables names, numbers but should not give datatypes.
@@ -199,3 +200,14 @@ printf("%d", x);
 output: 10
 - This type of cases are called ignoring the return value.
 - because we rae not storing the return value in main block, so it is not considered in main block.
+
+eg:
+float avg(int n1, int n2) -->parameter lists
+{
+whatever variable we are creating inside are local variables
+}
+- most of the main block of code doesnot have parameter lists.
+- if we are returning value in fuction block but not collecting in main block, it prints the value assigned in main block itself. It doesnot cause any error.
+- if we use return in void it causes an error.
+
+- In block of code if we write return(n1, n2), return n1, n2 , here return works as an operator and considers only the last value(n2).
