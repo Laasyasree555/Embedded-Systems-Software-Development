@@ -1,0 +1,69 @@
+Passing array to a function:
+POINTERS ARITHEMATIC:
+- used to increase the address
+ptr_constant
+eg: 100 + 1 *sizeof(datatype)
+ = 100+1 *sizeof(int)
+= (first element address)100+1 *4;
+= 104 - next element address
+- this is done by the complier itself.
+
+- arr[i] = *(arr+i) ==> both are same
+- arr[1] = *(arr+1)
+- 1[arr] = *(1+arr)
+- index must start from "0"
+- so that, arr[0] = *(arr+0) = *(100+0) = *100
+
+eg:
+void fun(int *a) {
+*a++;
+printf("%d", *a);
+*a++;
+printf("%d", *a);
+int main()
+ {
+int arr[] = {10, 20, 30, 40}
+fun(arr);
+}
+output : 20 30
+
+*a++ ==> here it will first consider a++ because of associativity, *(a++)= *(a+1) = *(100+1*sizeof(int))= *(104) = 20
+while printing second time, it updates *a = 20, *a++ ==> *(104+1*sizeof(int)) = *108 = 30
+- if we write (*a)++ like this ==> *100++ =10++ = 11
+- next time = 12
+- if we write like this *++a, it acts like this *(a+1) = *(100+1*sizeof(int)) = *104 = 10
+- if we write like this ++*a, it acts like this 1+(*a) = 1+*100  = 10+1 = 11
+
+eg:
+int main() 
+{
+int arr[5] = {1, 2, 3, 4, 5};
+int *ptr = &arr[3];
+printf("%d", ptr[-2]);
+}
+output: 2
+
+eg:
+int arr[4] = {1, 2, 3, 4};
+printf("%d", *(arr+1);
+printf("%d", *(&arr+1);
+
+output: 2 2
+
+-call: fun(arr)
+- collect: fun(int *ptr) or fun(int ptr[]) ==> both are same
+- if we write fun(int ptr[4]) - there is no meaning for the value, it considers only the address.
+- arr = base address = arr+constant *sizeof(datatype)
+- &arr = whole array address =  arr+constant *sizeof(whole array)
+- so consider only the base address in functions.
+- before calling the function we have to define it to inform the complier.
+- if we write function after main block, it gives warning as "implicit declaration of function"
+- also we can declare at the starting of the program, and write function where ever we want in the program
+syntax:
+return datatype function_name(arguments)
+- not mandatory to write variables in arguments but need to declare their datatypes.
+- declaration and collection should be same number of arguements, if not it causes an error: too many arguments
+- and also their datatypes should be same if not error: conflicting types
+- passing(in main block) and collecting(int function block) different datatypes, implicit typecasting will happen
+- in declaration and definition, if we are not providing any return datatype by default it is considered as "int".
+- this is calles "implicit- int" rule.
