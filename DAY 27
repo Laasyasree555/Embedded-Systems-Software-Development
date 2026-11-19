@@ -1,0 +1,84 @@
+DANGLING POINTER:
+- Pointer which is pointing to deleted memory.
+- If we dereference, it will end up with segmentation fault mostly but sometimes it ends up as a garbage value(for huge program) both causes error as "undefined behaviour".
+
+STATIC(Keyword):
+- Static helps to allocate memory in data segment. It stores the memory until we write return 0; in main block.
+- Data segment is divided into two:
+1) DS (Initialized)
+2) BSS (UnInitialized)
+
+- Memory is allocated in compile time only.
+- syntax:
+static datatype variable;
+eg:
+static int n;
+- if we assign any value to variable, its okay. if not by default it is considers as "zero".
+- It is a local variable.
+- It does not store the value of another variable addresses or values. It is an error.
+
+eg:
+/*
+#include <stdio.h>
+int main() {
+    static int x =5;
+    static int n = x;
+    printf("%d", n);
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+void fun()
+{
+    static int count = 10;
+    count++;
+    printf("%d ", count);
+}
+int main() {
+    fun();
+    fun();
+    fun();
+}
+*/
+
+/*
+#include <stdio.h>
+int * fun()
+{
+    static int n =10;
+    return &n;
+}
+int main() {
+    int *ptr  =  fun();
+    printf("%d \n", *ptr);
+
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+void fun()
+{
+    printf("%d", n);
+}
+int main() {
+    static int n =10;
+    fun();
+}
+*/
+
+/*
+#include <stdio.h>
+void fun()
+{
+    static int n = 5;
+    n++;
+    printf("%d", n);
+}
+int main() {
+    fun();
+    fun();
+    printf("%d", n);
+}
+*/
