@@ -1,0 +1,32 @@
+RECURSIVE FUNCTION:
+- Function calls itself.
+eg:
+int fun()
+{
+printf("hello");
+fun();
+}
+output: Infinite times hello will be printed.
+- which causes a segmentation fault.
+- Because, when the allocated memory for stackframes gets full, it leads to stack overflow.
+- We can stop this by using a base condition, it will only run until the condition is false.
+eg:
+Q) WAP to print 5 to 1 numbers
+int main() {
+static int count = 5;
+printf("%d", count);
+count--;
+if(count != 0)
+main();
+}
+
+output: 5 4 3 2 1
+- by using static keyword the value is stored in data segment.
+- And updates everytime the new stackframe is created.
+- once the condition is false, it goes to previous stackframe, where the function is called.
+- check whether any statements present below the function call, performs them and goes to previous stackframe.
+- if not also, goes to previous stack frames.
+- continues the process till the first stackframe and returns output.
+- all the stackframes are automatically deleted.
+- loops are faster than recursive function.
+- Recursive function is used to store previous stackframe data address.
