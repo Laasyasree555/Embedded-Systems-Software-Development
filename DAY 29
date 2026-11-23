@@ -1,0 +1,420 @@
+#include <stdio.h>
+
+int fun(int n)
+{
+if(n <= 1)
+return 1;
+
+return fun(n - 1) + fun(n - 2);
+}
+
+int main()
+{
+printf("%d", fun(4));
+return 0;
+}
+ 
+ 
+A) 3
+B) 5
+C) 8
+D) 13
+Answer: B
+ 
+#include <stdio.h>
+
+void fun(int n)
+{
+if(n > 0)
+{
+printf("%d ", n);
+fun(n - 1);
+}
+}
+
+int main()
+{
+fun(3);
+return 0;
+}
+ 
+ 
+A) 1 2 3
+B) 3 2 1
+C) 3 2 1 0
+D) Infinite loop
+Answer: B
+ 
+#include <stdio.h>
+ 
+void fun(int n)
+{
+    if(n == 0)
+        return;
+ 
+    printf("%d ", n);
+    fun(n - 1);
+    printf("%d ", n);
+}
+ 
+int main()
+{
+    fun(2);
+    return 0;
+}
+ 
+A) 2 1 1 2
+B) 2 1 2 1
+C) 1 2 2 1
+D) 2 2 1 1
+Answer: A
+ 
+#include <stdio.h>
+ 
+int fun(int n)
+{
+    if(n == 1)
+        return 1;
+ 
+    return 1 + fun(n / 2);
+}
+ 
+int main()
+{
+    printf("%d", fun(8));
+}
+ 
+A) 3
+B) 4
+C) 5
+D) 8
+Answer: B
+ 
+#include <stdio.h>
+ 
+int fun(int n)
+{
+    static int x = 0;
+ 
+    if(n > 0)
+    {
+        x++;
+        fun(n - 1);
+    }
+ 
+    return x;
+}
+ 
+int main()
+{
+    printf("%d", fun(5));
+}
+ 
+A) 0
+B) 1
+C) 5
+D) Garbage value
+Answer: C
+
+A13 - WAP to find 3rd largest element in an array
+Description:
+
+Read size and array elements from the user. You need to find 3rd largest element in the array without sorting or modifying the array.
+You need to pass array to the function. U need to collect array as pointer inside a function as shown below:
+              int third_largest(int *arr, int size);
+In function you need to find third largest element of the array and you need to return it to the main
+Pre-requisites:
+Arrays
+Functions
+Pointers
+Sample Execution:
+Test Case 1:
+Enter the size of the Array : 5
+Enter the elements into the array: 5 1 4 2 8
+Third largest element of the array is 4
+Test Case 2:
+Enter the size of the Array : 4
+Enter the elements into the array: 66 22 11 3
+Third largest element of the array is 11
+program:
+#include <stdio.h>
+
+int third_largest(int [], int);
+
+int main()
+{
+    int size, ret;
+    
+    //Read size from the user
+    printf("Enter the size of the array :");
+    scanf("%d", &size);
+    
+    int arr[size];
+    
+    for(int i = 0; i<size; i++)
+    scanf("%d", &arr[i]);
+    //Read elements into the array
+    
+    //funtion call
+    ret = third_largest(arr, size);
+    
+    printf("Third largest element of the array is %d\n", ret);
+}
+int third_largest(int *arr, int size)
+{
+    int largest = arr[0];
+    int smallest = arr[0];
+    for(int i = 0; i<size; i++)
+    {
+        if(arr[i]>largest)
+        largest = arr[i];
+        else if(arr[i] < smallest)
+        smallest = arr[i];
+    }
+    int second_largest = smallest;
+    for(int j = 0; j<size; j++)
+    {
+        if(arr[j]>second_largest && arr[j] < largest)
+        {
+            second_largest = arr[j];
+        }
+    }
+    int third_largest = smallest;
+    for(int j = 0; j<size; j++)
+    {
+        if(arr[j] > third_largest && arr[j] < second_largest)
+        {
+            third_largest = arr[j];
+        }
+    }
+    
+    return third_largest;
+}
+
+A14 - WAP to find 2nd largest element in an array
+
+Description:
+
+Read size and array elements from the user. You need to find 2nd largesst element in the array without sorting or modifying the array.
+You need to pass array to the function. U need to collect as pointer inside a function as shown below:
+              int sec_largest(int *arr, int size);
+In function you need to find second largest element of the array and you need to return it to the main
+Pre-requisites:
+Arrays
+Functions
+Pointers
+Sample Execution:
+Test Case 1:
+Enter the size of the Array : 5
+Enter the elements into the array: 5 1 4 2 8
+Second largest element of the array is 5
+Test Case 2:
+Enter the size of the Array : 4
+Enter the elements into the array: 66 22 11 3
+Second largest element of the array is 22
+
+program:
+#include <stdio.h>
+
+int sec_largest(int [], int);
+
+int main()
+{
+    int size, ret;
+    
+    //Read size from the user
+    printf("Enter the size of the array :");
+    scanf("%d", &size);
+    
+    int arr[size];
+    
+    //Read elements into the array
+    for(int i = 0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    
+    //funtion call
+    ret = sec_largest(arr, size);
+    
+    printf("Second largest element of the array is %d\n", ret);
+}
+int sec_largest(int *arr, int size)
+{
+    int largest = arr[0];
+    int smallest = arr[0];
+    for(int i = 0; i<size; i++)
+    {
+        if(arr[i]>largest)
+        largest = arr[i];
+        else if(arr[i] < smallest)
+        smallest = arr[i];
+    }
+    int second_largest = smallest;
+    for(int j = 0; j<size; j++)
+    {
+        if(arr[j]>second_largest && arr[j] < largest)
+        {
+            second_largest = arr[j];
+        }
+    }
+    return second_largest;
+}
+
+A15 - WAP to remove duplicate elements in a given array
+
+Description:
+
+Read size and elements into the array. After reading the input, you need to pass array to the function. In function, you need to remove duplicates/copy non-duplicate elements into new array.
+You need to print he final output in main
+Please use the prototype given below:
+ void fun(int *arr1, int size, int *arr2, int *new_size);
+Pre-requisites:
+
+Arrays
+Pointers
+Input:
+Read size and elements into the array
+Output:
+Test Case 1:
+
+Enter the size: 5
+
+Enter elements into the array: 5 1 3 1 5
+
+After removing duplicates: 5 1 3
+
+Test Case 2:
+
+Enter the size: 5
+
+Enter elements into the array: 2 1 1 1 5
+
+After removing duplicates: 2 1 5
+
+program:
+#include <stdio.h>
+
+void fun(int *arr1, int size, int *arr2, int *new_size);
+
+int main()
+{
+    int size;
+    scanf("%d", &size);
+    int arr1[size];
+    for(int i = 0; i<size; i++)
+    scanf("%d", &arr1[i]);
+    int arr2[size];
+    int new_size = 0;
+    fun(arr1, size, arr2, &new_size);
+    printf("After removing duplicates: ");
+    for(int i = 0; i<new_size; i++)
+    printf("%d ", arr2[i]);
+}
+ void fun(int *arr1, int size, int *arr2, int *new_size)
+ {
+     for(int i = 0; i<size; i++)
+     {
+         int flag = 0;
+         for(int j = 0; j < *new_size; j++)
+         {
+             if(arr1[i] == arr2[j])
+             {
+                 flag = 1;
+                 break;
+             }
+         }
+         if(flag == 0)
+         {
+             arr2[*new_size] = arr1[i];
+             (*new_size)++;
+         }
+     }
+ }
+
+A17 - WAP to check whether a given number is prime or not using function.
+Pre-requisites:
+Loops
+Arithmatic operators
+Conditional constructs
+Functions
+Objective:
+> To understand the concept of
+Loops (Exit points of loops)
+Conditional constructs
+Functions and return value
+Requirements:
+Read a number from user.
+Pass the number to the function is_prime().
+Check the number is prime or not in the function.
+Return 1 if the number is prime, or return 0 if the number is not prime.
+Print the output in the main function based on the return value.
+Sample Execution:
+
+Test case 1: 
+user@emertxe]./prime_or_not
+Enter a number: 2
+2 is a prime number
+
+Test case 2: 
+user@emertxe]./prime_or_not
+Enter a number: 4
+4 is not a prime number
+
+Test case 3: 
+user@emertxe]./prime_or_not
+Enter a number: 101
+101 is a prime number
+
+Test case 4: 
+user@emertxe]./prime_or_not
+Enter a number: 47
+47 is a prime number
+
+Test case 5: 
+user@emertxe]./prime_or_not
+Enter a number: -2
+Invalid input
+
+Test case 6: 
+user@emertxe]./prime_or_not
+Enter a number: 25
+25 is not a prime number
+
+Test case 7: 
+user@emertxe]./prime_or_not
+Enter a number: 2089
+2089 is a prime number
+
+program:
+#include <stdio.h>
+
+int is_prime(int);
+
+int main()
+{
+    int num;
+    scanf("%d", &num);
+    if(num <= 1)
+    {
+    printf("Invalid input\n");
+    return 0;
+    }
+    int res = is_prime(num);
+    if(res == 0)
+    printf("%d is not a prime number", num);
+    else
+    printf("%d is a prime number", num);
+    return 0;
+}
+int is_prime(int num)
+{
+    for(int i = 2; i < num-1; i++)
+    {
+    if(num % i == 0)
+    {
+        return 0;
+    }
+}
+    return 1;
+}
