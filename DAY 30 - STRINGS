@@ -7,21 +7,21 @@ Eg: "Enter the number", "hello", "hi"
 - char str[6] = "hello"; - implicitly null character is added.
 eg:
 possible:
-char str[] = "hello";
-char str[10] = "hello"; -reaining elements are stored as '0'
+1) char str[] = "hello";
+2) char str[10] = "hello"; -reaining elements are stored as '0'
 - char '0' is nothing but null character.
-char str[10] = "hi hello"
+3) char str[10] = "hi hello"
 - space is also a character.
-char str[5] = {"hi"}
+4) char str[5] = {"hi"}
 - if we are writing group of statements, we need {}, if it is a single statements no need to mention {}, if mentioned also there is no error/warning.
-char str[20] = {"hi" "hello"}
+5) char str[20] = {"hi" "hello"}
 - since there is no comma in between the strings, they are merged into one single string.
 
 impossibilities:
-char str[3] = "hello"
+1) char str[3] = "hello"
 - it is not an error, but a warning is given like excess elements intialized
 - it is an character array.
-char str[20] = {"hi", "hello"};
+2) char str[20] = {"hi", "hello"};
 - here 2 null characters are there, it is not possible, and also comma is there.
 - it leads to an error.
 
@@ -30,9 +30,10 @@ TYPES OF STRINGS:
 - Memory is allocated in code segment.
 - these are the strings which are not changeable/modifiable.
 eg:
-printf("Enter the number: ")
-char *ptr = "hello";
+1) printf("Enter the number: ")
+2) char *ptr = "hello";
 - if I created a string like this:
+3)
 char *ptr1 = "hello"
 char *ptr2 = "hello"
 - if both the strings are exactly the same, there will be a shared memory.
