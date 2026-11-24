@@ -1,0 +1,84 @@
+STRINGS:
+- Collection of characters, which ends by null character (\0)
+Eg: "Enter the number", "hello", "hi"
+
+- character array: char str[5] = {'H', 'E', 'L', 'L', 'O'};
+- String array: char str[6] = {'H', 'E', 'L', 'L', 'O', '\0'};
+- char str[6] = "hello"; - implicitly null character is added.
+eg:
+possible:
+char str[] = "hello";
+char str[10] = "hello"; -reaining elements are stored as '0'
+- char '0' is nothing but null character.
+char str[10] = "hi hello"
+- space is also a character.
+char str[5] = {"hi"}
+- if we are writing group of statements, we need {}, if it is a single statements no need to mention {}, if mentioned also there is no error/warning.
+char str[20] = {"hi" "hello"}
+- since there is no comma in between the strings, they are merged into one single string.
+
+impossibilities:
+char str[3] = "hello"
+- it is not an error, but a warning is given like excess elements intialized
+- it is an character array.
+char str[20] = {"hi", "hello"};
+- here 2 null characters are there, it is not possible, and also comma is there.
+- it leads to an error.
+
+TYPES OF STRINGS:
+1) CONSTANT STRINGS:
+- Memory is allocated in code segment.
+- these are the strings which are not changeable/modifiable.
+eg:
+printf("Enter the number: ")
+char *ptr = "hello";
+- if I created a string like this:
+char *ptr1 = "hello"
+char *ptr2 = "hello"
+- if both the strings are exactly the same, there will be a shared memory.
+- the address of ptr1 and ptr2 is same.
+- if i change/modify the string of prt1, then ptr2 string is also modified automatically.
+- so it is not possible to change/modify constant strings.
+
+2) MODIFIABLE STRINGS:
+- These strings are modifiable/changeable
+- doesnot have a shared memory
+eg:
+1)
+char str[6] = {"hello"};
+str[0] = 'H';
+
+2)
+char str1[6] = "hello";
+char str2[6] = "hello";
+- they doesnot have a same address and they are changeable/modifiable
+
+SELECTIVE SCANF:
+- They are other functions for reading the elements like %s, gets, fgets, etc
+- But each has its own advantages and disadvantages.
+- So it is efficient to use selective scanf.
+
+eg:
+#include <stdio.h>
+int main(){
+    char str[100];
+    scanf("%99[^\n]", str);
+    printf("%s", str);
+    return 0;
+}
+
+- ^ represents the first element
+- \n is nothing but new line(enter)
+- prints the value till we press enter button
+- in this we donot have to mention & in scanf, the name of the variable itself gives the base address of the string.
+- if the size is 100, we have give 99(size-1), because 1 byte is always allocated to null character.
+
+eg:
+ scanf("%[^l]", str);
+input: hi hello
+output: hi he
+
+eg:
+scanf("%9[^\n]", str);
+input: hi hellowelcome
+output: hi hellow
