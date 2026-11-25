@@ -25,6 +25,8 @@ The character 'a' is an alnum character.
 Test Case 2:
 Enter the character: ?
 The character '?' is not an alnum character.
+
+
 PROGRAM:
 #include <stdio.h>
 
@@ -94,6 +96,8 @@ Entered character is lower case alphabet
 Test Case 2:
 Enter the character:3
 Entered character is not lower case alphabet
+
+
 PROGRAM:
 #include <stdio.h>
 
