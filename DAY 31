@@ -1,0 +1,267 @@
+A9 - WAP to implement your own isalnum() function
+Description:
+
+c-type library functions check whether ch, which must have the value of an unsigned char or EOF, falls into a certain character class according to the current locale.
+isalnum() - checks for an alphanumeric character; it is equivalent to (isalpha(c) || isdigit(c)).
+Pr-requisites: -
+Functions
+Objective: -
+
+To understand the concept of
+Functions
+Inputs: -
+
+        An ASCII character
+
+Outputs: -
+
+        0 or non-zero value based on condition success or failure
+
+Sample execution: -
+Test Case 1:
+user@emertxe] ./c_type_lib
+Enter the character: a
+The character 'a' is an alnum character.
+Test Case 2:
+Enter the character: ?
+The character '?' is not an alnum character.
+PROGRAM:
+#include <stdio.h>
+
+int my_isalnum(int);
+
+int main()
+{
+    char ch;
+    int ret;
+    
+    printf("Enter the character: \n");
+    scanf("%c", &ch);
+    
+    ret = my_isalnum(ch);
+    /*
+        Based on return value, print whether ch is alphanumeric or not
+    */
+    if(ret == 1)
+    printf("Entered character is alphanumeric character\n");
+    else
+    printf("Entered character is not alphanumeric character\n");
+}
+
+int my_isalnum(int ch)
+{
+    if(ch >= 'A' && ch <= 'Z')
+    {
+        return 1;
+    }
+    else if(ch >= 'a' && ch <= 'z')
+    {
+        return 1;
+    }
+    else if(ch >= '0' && ch <='9')
+    {
+       return 1;
+    }
+    else
+    printf("Entered character is not alphanumeric character\n");
+    return 0;
+}
+
+A10 - WAP to implement your own islower() function
+Description:
+
+c-type library functions check whether ch, which must have the value of an unsigned char or EOF, falls into a certain character class according to the current locale.
+islower() - checks for a lower case alphabet whether entered character is between 'a' to 'z'.
+Pr-requisites: -
+Functions
+Objective: -
+
+To understand the concept of
+Functions
+Inputs: -
+
+        An ASCII character
+
+Outputs: -
+
+        0 or non-zero value based on condition success or failure
+
+Sample execution: -
+Test Case 1:
+user@emertxe] ./c_type_lib
+Enter the character: a
+Entered character is lower case alphabet
+Test Case 2:
+Enter the character:3
+Entered character is not lower case alphabet
+PROGRAM:
+#include <stdio.h>
+
+int my_islower(int);
+
+int main()
+{
+    char ch;
+    int ret;
+    
+    printf("Enter the character:");
+    scanf("%c", &ch);
+    
+    ret = my_islower(ch);
+    /*
+        Based on return value, print whether ch is lower case alphabet or not
+    */
+    if(ret == 1)
+    printf("Entered character is lower case alphabet\n");
+    else
+    printf("Entered character is not lower case alphabet\n");
+}
+int my_islower(int ch)
+{
+    if(ch >= 'a' && ch <= 'z')
+    {
+        return 1;
+    }
+    else
+     return 0;
+}
+
+A11 - WAP to implement your own ispunct() function
+Description:
+
+c-type library functions check whether ch, which must have the value of an unsigned char or EOF, falls into a certain character class according to the current locale.
+ispunct() - checks  for  any  printable character which is not a space or an alphanumeric character.
+Pr-requisites: -
+Functions
+Objective: -
+
+To understand the concept of
+Functions
+Inputs: -
+
+        An ASCII character
+
+Outputs: -
+
+        0 or non-zero value based on condition success or failure
+
+Sample execution: -
+Test Case 1:
+user@emertxe] ./c_type_lib
+Enter the character: a
+Entered character is not punctuation character
+Test Case 2:
+Enter the character:$
+Entered character is punctuation character
+
+PROGRAM:
+#include <stdio.h>
+
+int my_ispunct(int);
+
+int main()
+{
+    char ch;
+    int ret;
+    
+    printf("Enter the character:");
+    scanf("%c", &ch);
+    
+    ret = my_ispunct(ch);
+    /*
+        Based on return value, print whether ch is lower case alphabet or not
+    */
+    if(ret == 0)
+     printf("Entered character is not punctuation character\n");
+     else
+     printf("Entered character is punctuation character\n");
+}
+int my_ispunct(int ch)
+{
+    if(ch >= 'A' && ch <= 'Z')
+    {
+        return 0;
+    }
+    else if(ch >= 'a' && ch <= 'z')
+    {
+        return 0;
+    }
+     else if(ch >= '0' && ch <= '9')
+    {
+        return 0;
+    }
+    else
+    return 1;
+}
+
+A12 - WAP to implement your own isxdigit() function
+Description:
+
+c-type library functions check whether ch, which must have the value of an unsigned char or EOF, falls into a certain character class according to the current locale.
+isxdigit() - checks for a hexadecimal digit i.e. given character is between '0' - '9' or 'a' - 'f' or 'A' - 'F'
+Pr-requisites: -
+Functions
+Objective: -
+
+To understand the concept of
+Functions
+Inputs: -
+        An ASCII character
+Outputs: -
+        0 or non-zero value based on condition success or failure
+Sample execution: -
+Test Case 1:
+user@emertxe] ./is_xdigit
+Enter the character: a
+Entered character is an hexadecimal digit
+
+Test Case 2:
+user@emertxe] ./is_xdigit
+Enter the character:3
+Entered character is  an hexadecimal digit
+
+Test Case 3:
+user@emertxe] ./is_xdigit
+Enter the character:G
+Entered character is not an hexadecimal digit
+
+PROGRAM:
+#include <stdio.h>
+
+int is_xdigit(int);
+
+int main()
+{
+    char ch;
+    short ret;
+    
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    
+    ret = is_xdigit(ch);
+    
+    /* Based on the return value of the function print the message */
+    if(ret == 1)
+    printf("Entered character is an hexadecimal digit\n");
+    else
+    printf("Entered character is not an hexadecimal digit\n");
+    
+    return 0;
+}
+int is_xdigit(int ch)
+{
+    if(ch >= '0' && ch<= '9')
+    {
+        return 1;
+    }
+    else if(ch >= 'A' && ch<= 'F')
+    {
+        return 1;
+    }
+    else if(ch >= 'a' && ch<= 'f')
+    {
+        return 1;
+    }
+    else
+    return 0;
+}
