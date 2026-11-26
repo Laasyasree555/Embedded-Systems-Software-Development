@@ -1,0 +1,157 @@
+STRING RELATED FUNTIONS:
+1) strlen - string length
+- if we want to use this funtion, we have to declare header file(#include <string.h>
+- used to tell how many characters present in the string.
+- prototype:
+int strlen(char *)
+eg:
+1)
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[50];
+    scanf("%[^\n]", str);
+    int len = strlen(str);
+    printf("%d\n", len);
+    return 0;
+}
+*/
+
+2)
+/*
+#include <stdio.h>
+int my_strlen(char *str)
+{
+    int i =0, count = 0;
+    while(str[i] != '\0')
+    {
+        count++;
+        i++;
+    }
+    return count;
+}
+int main() {
+    char str[50];
+    scanf("%[^\n]", str);
+    int size = sizeof(str);
+    int len = my_strlen(str);
+    printf("%d %d\n", len, size);
+    return 0;
+}
+*/
+
+2) strcpy - string copy
+- used to copy characters from source to destination
+- it doesnot copy the null character, we have to manually assign.
+- prototype:
+char *my_strcpy(char *dest, char *src)
+
+eg:
+1)
+/*
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str1[50] = "hi hello";
+    char str2[50];
+    char *ptr=strcpy(str2, str1);
+    printf("%s\n", ptr);
+}
+*/
+
+2)
+/*
+#include <stdio.h>
+#include <string.h>
+char *my_strcpy(char *dest, char *src)
+{
+    int i = 0;
+    while(src[i] != '\0')
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+}
+int main()
+{
+    char src[50] = "hi hello laasya";
+    char dest[50];
+    my_strcpy(dest, src);
+    printf("%s\n", dest);
+    return 0;
+}
+*/
+
+
+3) strcat - string concatenate
+- used to print both dest and src strings into src
+- prototype
+char * strcat(char *restrict dst, const char *restrict src)
+eg:
+1) 
+#include <stdio.h>
+char my_strcat(char *str1, char *str2)
+{
+    int i = 0, j=0;
+    while(str1[i] != '\0')
+    {
+        i++;
+    }
+    while(str2[j] != '\0')
+    {
+        str1[i] = str2[j];
+        i++;
+        j++;
+    }
+    str1[i] = '\0';
+}
+int main(){
+    char str1[50];
+    scanf("%s", str1);
+    char str2[50];
+    scanf("%s", str2);
+    my_strcat(str1, str2);
+    printf("concatenate string is %s", str1);
+    return 0;
+}
+
+4)strcmp - string compare
+- prototype
+int strcmp (char *s1, char *s2)
+- used to check if both strings are equal or not
+- if equal - return 0
+- if s1>s2 - return +ve
+- if s1 < s2 - return -ve
+- here postive and negative values are the differences of their ASCII values.
+eg:
+1)
+#include <stdio.h>
+int my_strcmp(char *str1, char *str2)
+{
+    int i = 0;
+    while(str1[i] != '\0' || str2[i] != '\0')
+    {
+        if(str1[i] != str2[i])
+        {
+            return 1;
+        }
+        i++;
+    }
+    return 0;
+}
+int main(){
+    char str1[50];
+    char str2[50];
+    printf("Enter the string1 : ");
+    fgets(str1, 50, stdin);
+    printf("Enter the string2 : ");
+    fgets(str2, 50, stdin);
+    int res = my_strcmp(str1, str2);
+    if(res==0)
+    printf("Entered Strings are equal\n");
+    else
+    printf("Entered Strings are not equal\n");
+    return 0;
+}
